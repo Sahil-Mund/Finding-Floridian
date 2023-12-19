@@ -1,0 +1,61 @@
+// src/App.scss
+
+$background-color: #f5f1ee;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: $background-color;
+}
+
+:root {
+  /* fonts */
+  --font-poppins: Poppins;
+  --font-montserrat: Montserrat;
+
+  /* font sizes */
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-3xl: 22px;
+  --font-size-49xl: 68px;
+  --font-size-21xl: 40px;
+  --font-size-8xl: 27px;
+
+  /* Colors */
+  --color-whitesmoke-100: #f5f1ee;
+  --green-green5: #34c759;
+  --white-white: #fff;
+  --color-darkolivegreen-100: #6a704c;
+  --color-darkolivegreen-200: rgba(106, 112, 76, 0.1);
+  --color-aliceblue: #eff8ff;
+  --color-gray-100: #1b1b1b;
+
+  /* Border radiuses */
+  --br-120xl: 139px;
+  --br-50xl-5: 69.5px;
+  --br-5xs: 8px;
+  --br-3xs: 10px;
+  --br-xl: 20px;
+  --br-xs: 12px;
+  --br-11xs: 2px;
+  --br-9xs: 4px;
+  --br-181xl: 200px;
+}
+
+.btn-primary {
+  border-radius: 10px;
+  background: #6a704c;
+  width: 270px;
+  height: 65px;
+  color: #f5f1ee;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+}

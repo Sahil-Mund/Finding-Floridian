@@ -1,0 +1,46 @@
+.header {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #6a704c;
+    .logo {
+        img {
+            width: 126px;
+            height: 82px;
+        }
+    }
+    .nav-items {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+            color: #6a704c;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+            li {
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+        }
+    }
+    .profile-pic {
+        img {
+            width: 52px;
+            height: 52px;
+        }
+    }
+}
