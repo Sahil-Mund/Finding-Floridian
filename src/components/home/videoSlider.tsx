@@ -9,10 +9,7 @@ const VideoSlider: React.FC<VideoSliderProps> = ({ videoUrls }) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const handlePrev = () => {
-    console.log(currentVideoIndex);
-
-    //TODO : correct it
-    // setCurrentVideoIndex((prevIndex) => Math.max(0, prevIndex - 1));
+    setCurrentVideoIndex((prevIndex) => Math.max(0, prevIndex - 1));
   };
 
   const handleNext = () => {

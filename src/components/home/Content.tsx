@@ -1,5 +1,4 @@
 import React from "react";
-import '../styles/home.scss'
 
 interface ContentProps {
   image: string;
@@ -31,6 +30,8 @@ const Content: React.FC<ContentProps> = ({
         <div>{heading}</div>
         <div>{subHeading}</div>
         <p> {para}</p>
+        <button className="btn-primary"> Contact Me </button>
+
       </div>
     </div>
     </section>

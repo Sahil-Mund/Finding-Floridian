@@ -1,0 +1,87 @@
+section.shop {
+    .banner-container {
+        background: #f9f4f0;
+        width: 100%;
+
+        .banner {
+            width: 85%;
+            padding-bottom: 3%;
+            margin: auto;
+            background: #f9f4f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .banner-content {
+                width: 40%;
+
+                p:nth-child(1) {
+                    color: #6a704c;
+                    font-family: Poppins;
+                    font-size: 54px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 113%;
+                    text-transform: uppercase;
+                }
+
+                p:nth-child(2) {
+                    color: #6a704c;
+                    font-family: Poppins;
+                    font-size: 31px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 113%;
+                    text-transform: uppercase;
+                    margin-top: -48px;
+                }
+            }
+
+            .banner-img {
+                padding-top: 5%;
+                width: 60%;
+                height: 327px;
+                display: flex;
+                gap: 14px;
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .post-container {
+        background: #fff;
+        .posts {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 2px;
+            align-items: center;
+            padding: 5%;
+
+            .post {
+                width: 31%;
+                background: #f9f4f0;
+                max-height: 400px;
+                min-height: 400px;
+                border-radius: 10px;
+                div {
+                    padding: 5%;
+
+                    img {
+                        height: 281px;
+                    }
+                    p {
+                        color: #6a704c;
+                        font-family: Poppins;
+                        font-size: 17px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 113%;
+                    }
+                }
+            }
+        }
+    }
+}

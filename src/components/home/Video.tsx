@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import {playBtnImg} from '../assets/constansts'
+import {playBtnImg} from '../../assets/constansts'
 
 interface VideoProps {
   url: string;

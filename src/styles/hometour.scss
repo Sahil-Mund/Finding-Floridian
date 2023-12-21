@@ -1,0 +1,97 @@
+section.home-tour-section {
+    padding: 3%;
+
+    .container-box {
+        background: #f5f1ee;
+        filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
+        width: 62%;
+        margin: auto;
+        padding: 7%;
+        padding-top: 5%;
+        text-align: center;
+
+        h3 {
+            color: #6a704c;
+            font-family: Poppins;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 119%;
+            margin-bottom: 5%;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            margin: 4% 0px;
+            .left {
+                margin-left: 2%;
+                p{
+                    color: #6A704C;
+                    font-family: Montserrat;
+                    font-size: 23px;
+                    font-style: normal;
+                    font-weight: 500;
+                    width: 127%;
+                    line-height: 113%;
+                }
+            }
+
+            .right {
+                margin: auto auto auto 20%;
+
+                div {
+                    border-radius: 8px;
+                    border: 1px solid #6a704c;
+                    padding: 10px;
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+
+                    .dropdown {
+                        border: none;
+                        background: none;
+                        #dropdown {
+                            border: none;
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 900px; // Adjust as needed
+            margin: 0 auto;
+
+            .video-container {
+                position: relative;
+                width: 30%;
+                margin: 10px;
+                // video {
+                //     width: 100%;
+                //     height: auto;
+                //     border-radius: 8px;
+                // }
+                // .play-button {
+                //     position: absolute;
+                //     top: 50%;
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                //     font-size: 24px;
+                //     color: white;
+                //     cursor: pointer;
+                // }
+                .play-button-overlay {
+                    top: 35%;
+                    padding-left: 45%;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,9 @@
 section.hero-section {
+    background: url(https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/94ac7dbd-5ab2-4536-b9f9-b1a7aa892dfd.png)
+        no-repeat center center / cover;
+
     .hero {
-        width: 100%;
+        width: 90%;
         margin: auto;
 
         padding-bottom: 2%;
@@ -12,9 +15,8 @@ section.hero-section {
             position: relative;
 
             img {
-                width: 40%;
-                object-fit: cover;
-                height: 562px;
+                width: 33%;
+                height: 569px;
             }
         }
 
@@ -70,19 +72,6 @@ section.hero-section {
                 align-items: center;
                 cursor: pointer;
                 font-size: 18px;
-            }
-        }
-
-        .follow {
-            p {
-                color: #6a704c;
-                text-align: center;
-                font-family: Poppins;
-                font-size: 22px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: 127%;
-                text-align: center;
             }
         }
 
@@ -195,9 +184,7 @@ section.content-section {
 
         .image-container {
             img {
-                height: 401px;
-                object-fit: contain;
-                width: 347px;
+                width: 438px;
             }
         }
 
@@ -290,7 +277,7 @@ section.about-section {
             justify-content: space-between;
             position: relative;
 
-            .item-container {
+            .item-container{
                 .item {
                     img {
                         width: 79%;
@@ -300,7 +287,7 @@ section.about-section {
                         line-height: 106%;
                     }
                 }
-
+    
                 .hover-card {
                     width: 220px;
                     height: 220px;
@@ -312,7 +299,7 @@ section.about-section {
                     top: 5%;
                     margin-left: 2%;
                     transition: transform 0.3s ease;
-
+    
                     .inner-container {
                         width: 175px;
                         height: 168px;
@@ -328,6 +315,8 @@ section.about-section {
                     }
                 }
             }
+
+           
         }
     }
 }

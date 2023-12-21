@@ -34,6 +34,15 @@
                 font-style: normal;
                 font-weight: 300;
                 line-height: normal;
+                list-style-type: none;
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            a.active{
+                color: red;
             }
         }
     }

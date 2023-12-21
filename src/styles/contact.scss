@@ -1,0 +1,190 @@
+section.contact-section {
+    .contact-container {
+        gap: 70px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+        fill: #fff;
+        filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
+        display: flex;
+        padding: 2%;
+        width: 67%;
+    margin: 4% auto;
+   
+
+        .image-container {
+            display: flex;
+            width: 36%;
+            .svg-overlay{
+                height: 494px;
+                background-image: url("https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/86b75781-0786-4df7-880e-3211816ea6ad.png");
+            }
+            img:nth-child(2) {
+                height: 494px;
+                margin-left: -178px;
+            }
+        }
+
+        .form-container {
+            width: 64%;
+
+            h5 {
+                color: #6a704c;
+                font-family: Poppins;
+                font-size: 37px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 113%;
+                text-transform: uppercase;
+                margin-top: 0px;
+            }
+
+            p {
+                color: #6a704c;
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 113%;
+                text-transform: uppercase;
+                margin-top: -58px;
+            }
+
+            .social-container {
+                margin-bottom: 13px;
+                display: flex;
+                gap: 9px;
+
+                span {
+                    color: #6a704c;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 113%;
+                    text-transform: uppercase;
+                    padding: 2.5% 4%;
+                    border-radius: 10px;
+                    border: 1px solid #6a704c;
+                    background: #f9f4f0;
+                }
+            }
+
+            form {
+                .group {
+                    display: flex;
+                    gap: 2%;
+                    margin-bottom: 1%;
+
+                    input {
+                        width: 48%;
+                        border-radius: 10px;
+                        border: 1px solid #6a704c;
+                        background: #f9f4f0;
+                        padding: 2%;
+                        outline: none;
+                    }
+                    input::placeholder {
+                        color: #6a704c;
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 26px; /* 144.444% */
+                    }
+                }
+
+                .checkbox {
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        background-color: #f5f1ee;
+                        cursor: pointer;
+                        min-height: 40px;
+                        margin-bottom: 10px;
+                        border-radius: 10px;
+                        width: 40px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    input[type="checkbox"]::before {
+                        content: "\2713";
+                        position: relative;
+                        top: 5px;
+                        left: 4px;
+                        transform: translate(-50%, -50%);
+                        font-size: 20px;
+                        color: #4a3163;
+                        font-weight: bold;
+                        opacity: 0;
+                    }
+                    input[type="checkbox"]:checked::before {
+                        opacity: 1;
+                    }
+                  
+                    div {
+                        display: flex;
+                        gap: 14px;
+                        align-items: center;
+
+                        input {
+                            width: 42px;
+                            height: 23px;
+                            flex-shrink: 0;
+                        }
+                    }
+
+                    label {
+                        color: #6a704c;
+                        font-family: Poppins;
+                        font-size: 11px;
+                        font-style: italic;
+                        font-weight: 300;
+                        line-height: normal;
+                    }
+                }
+
+                div {
+                    width: 100%;
+                    textarea {
+                        border-radius: 10px;
+                        border: 1px solid #6a704c;
+                        background: #f9f4f0;
+                        width: 95%;
+                        margin: 3% 0;
+                        outline: none;
+                        padding: 2%;
+                    }
+                    textarea::placeholder {
+                        color: #6a704c;
+                        font-family: Poppins;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 26px; /* 144.444% */
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    color: #f9f4f0;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}

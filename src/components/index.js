@@ -1,8 +1,26 @@
 import Navbar from "./navbar";
-import HeroSection from "./HeroSection";
-import VideoSlider from "./videoSlider";
-import Content from "./Content";
-import About from "./About";
-import InstaPost from "./InstaPosts";
 
-export { Navbar, HeroSection, VideoSlider, Content, About, InstaPost };
+import HeroSection from "./home/HeroSection";
+import VideoSlider from "./home/videoSlider";
+import Content from "./home/Content";
+import About from "./home/About";
+import InstaPost from "./home/InstaPosts";
+
+import RecommendationPostCard from "./RecommendationPostCard";
+import PostCard from "./PostCard";
+import VideoGallery from "./VideoGallery";
+import DropDown from "./Dropdown";
+
+
+export {
+  Navbar,
+  HeroSection,
+  VideoSlider,
+  Content,
+  About,
+  InstaPost,
+  RecommendationPostCard,
+  PostCard,
+  VideoGallery,
+  DropDown
+};

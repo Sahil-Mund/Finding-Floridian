@@ -13,6 +13,8 @@ const InstaPost: React.FC<InstaPostProps> = ({ recentPosts }) => {
     phoneNumber: "",
   });
 
+  const [btnDisabled, setButtonDisabled] = useState(true);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -20,6 +22,14 @@ const InstaPost: React.FC<InstaPostProps> = ({ recentPosts }) => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+  // Check if any values in formData are empty
+  const anyValuesEmpty = Object.values(formData).some(
+    (value) => value === ""
+  );
+
+  // Set button disabled state based on the condition
+  setButtonDisabled(anyValuesEmpty);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -30,7 +40,7 @@ const InstaPost: React.FC<InstaPostProps> = ({ recentPosts }) => {
       firstName: "",
       email: "",
       phoneNumber: "",
-    })
+    });
   };
   return (
     <section className="insta-post-section">
@@ -78,7 +88,8 @@ const InstaPost: React.FC<InstaPostProps> = ({ recentPosts }) => {
             value={formData.phoneNumber}
             onChange={handleChange}
           />
-          <button className="btn-primary" type="submit">
+          <button className="btn-primary" type="submit" disabled={btnDisabled}
+          style={{ opacity: btnDisabled ? 0.5 : 1}}>
             Contact
           </button>
         </form>

@@ -4,14 +4,14 @@ import {
   VideoSlider,
   Content,
   About,
-  InstaPost,
 } from "../components";
 import {
   videoUrls,
   homeAboutImages,
-  InstarecentPosts,
-  partners,
+
 } from "../assets/constansts";
+
+import '../styles/home.scss'
 
 interface HomePageProps {
   // Add your component's props here
@@ -23,7 +23,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
       <HeroSection />
       <VideoSlider videoUrls={videoUrls} />
       <Content
-        image="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/d5d5bfea-b181-4ff3-8ad4-aa41b9551a16.png"
+        image="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/1f337293-f126-4261-a601-30a913a410be.png"
         heading="I'm Carter Long"
         subHeading="Your Home Girl."
         direction="forward"
@@ -35,16 +35,16 @@ const HomePage: React.FC<HomePageProps> = (props) => {
         images={homeAboutImages}
         title="What Sets me Apart"
         visibleHeading={true}
-        rowCount="4"
+        isHoverEffect={true}
       />
-      <InstaPost recentPosts={InstarecentPosts} />
+      {/* <InstaPost recentPosts={InstarecentPosts} />
       <About
         sectionName="partners-section"
         images={partners}
         visibleHeading={false}
-        rowCount="4"
+        isHoverEffect={false}
         title="Partners to come"
-      />
+      /> */}
     </>
   );
 };
