@@ -41,7 +41,7 @@ section.hero-section {
                     color: #6a704c;
                     text-align: center;
                     font-family: Poppins;
-                    font-size: 31px;
+                    font-size: 48px;
                     font-style: normal;
                     font-weight: 600;
                     line-height: 85%; /* 34px */
@@ -52,9 +52,9 @@ section.hero-section {
                 .semibold {
                     color: #6a704c;
                     font-family: Poppins;
-                    font-size: 54px;
+                    font-size: 34px;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: 300;
                     line-height: 85%;
                     text-transform: uppercase;
                     display: block;
@@ -99,7 +99,8 @@ section.hero-section {
 
 section.video-slider-section {
     .video-slider {
-        width: 83%;
+        // width: 83%;
+        width: 76%;
         margin: auto;
         gap: 20px;
         align-items: center;
@@ -119,7 +120,7 @@ section.video-slider-section {
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
-            gap: 5px;
+            // gap: 5px;
 
             .video-slide {
                 width: 100%;
@@ -134,15 +135,22 @@ section.video-slider-section {
                 .video-container {
                     video {
                         border-radius: 4px;
+                        object-fit: cover;
+                        height: 326px;
+                        width: 94%;
                     }
                 }
             }
         }
 
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+
         .play-button-overlay {
             position: absolute;
-            top: 48%;
-            padding-left: 21%;
+            top: 58%;
+            padding-left: 18%;
             transform: translate(-50%, -50%);
             cursor: pointer;
             opacity: 0.7;
@@ -195,9 +203,9 @@ section.content-section {
 
         .image-container {
             img {
-                height: 401px;
+                height: 537px;
                 object-fit: contain;
-                width: 347px;
+                width: 434px;
             }
         }
 
@@ -293,7 +301,12 @@ section.about-section {
             .item-container {
                 .item {
                     img {
-                        width: 79%;
+                        // width: 149%;
+                        width: 76%;
+                        // aspect-ratio: 3/2;
+                        object-fit: contain;
+                        max-height: 257px;
+                        min-height: 257px;
                     }
                     h4 {
                         width: 264px;

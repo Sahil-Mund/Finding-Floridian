@@ -27,8 +27,8 @@ section.home-tour-section {
             margin: 4% 0px;
             .left {
                 margin-left: 2%;
-                p{
-                    color: #6A704C;
+                p {
+                    color: #6a704c;
                     font-family: Montserrat;
                     font-size: 23px;
                     font-style: normal;
@@ -44,7 +44,7 @@ section.home-tour-section {
                 div {
                     border-radius: 8px;
                     border: 1px solid #6a704c;
-                    padding: 10px;
+                    // padding: 10px;
                     display: flex;
                     gap: 15px;
                     align-items: center;
@@ -52,9 +52,43 @@ section.home-tour-section {
                     .dropdown {
                         border: none;
                         background: none;
-                        #dropdown {
+                        select {
                             border: none;
                             background: none;
+                            outline: none;
+                            color: #6a704c;
+                            font-family: Poppins;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            // width: 158px;
+                            padding: 22px;
+
+                            // to remove the down arrow icon
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            text-indent: 1px;
+                            text-overflow: "";
+
+                            option {
+                                padding: 5px 10px; /* Add padding to the options */
+                                text-indent: 5px;
+                                border-radius: 15px;
+                                background-color: #f5f1ee;
+                                border: 1px solid green;
+
+                                &:checked, &:hover{
+                                    background-color: #6a704c;
+                                    color: #f5f1ee;
+                                }
+
+                                &::after{
+                                    content: '';
+                                }
+                            
+                            }
                         }
                     }
                 }
@@ -72,6 +106,11 @@ section.home-tour-section {
                 position: relative;
                 width: 30%;
                 margin: 10px;
+                video {
+                    height: 326px;
+                    object-fit: cover;
+                    width: 93%;
+                }
                 // video {
                 //     width: 100%;
                 //     height: auto;
@@ -87,8 +126,8 @@ section.home-tour-section {
                 //     cursor: pointer;
                 // }
                 .play-button-overlay {
-                    top: 35%;
-                    padding-left: 45%;
+                    top: 44%;
+                    padding-left: 40%;
                     position: absolute;
                 }
             }

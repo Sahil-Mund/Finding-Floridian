@@ -1,29 +1,21 @@
 import React from "react";
-import {
-  HeroSection,
-  VideoSlider,
-  Content,
-  About,
-} from "../components";
-import {
-  videoUrls,
-  homeAboutImages,
+import { VideoSlider, Content, About, ChatBotButton } from "../components";
+import { videoUrls, homeAboutImages } from "../assets/constansts";
 
-} from "../assets/constansts";
+import "../styles/home.scss";
+import HeroSectionWithHomeBanner from "../components/home/HeroSectionWithHomeBanner";
 
-import '../styles/home.scss'
-
-interface HomePageProps {
-  // Add your component's props here
-}
+interface HomePageProps {}
 
 const HomePage: React.FC<HomePageProps> = (props) => {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <HeroSectionWithHomeBanner />
       <VideoSlider videoUrls={videoUrls} />
       <Content
-        image="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/1f337293-f126-4261-a601-30a913a410be.png"
+        // image="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/1f337293-f126-4261-a601-30a913a410be.png"
+        image="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/0cd1bb90-0482-483e-971a-6fe3fbb2029c.jpg"
         heading="I'm Carter Long"
         subHeading="Your Home Girl."
         direction="forward"
@@ -38,13 +30,8 @@ const HomePage: React.FC<HomePageProps> = (props) => {
         isHoverEffect={true}
       />
       {/* <InstaPost recentPosts={InstarecentPosts} />
-      <About
-        sectionName="partners-section"
-        images={partners}
-        visibleHeading={false}
-        isHoverEffect={false}
-        title="Partners to come"
-      /> */}
+       */}
+
     </>
   );
 };

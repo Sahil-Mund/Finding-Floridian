@@ -1,0 +1,23 @@
+.rating-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .selected {
+    background-color: #6A704C; /* Change this color to your preferred highlight color */
+  }
+
+  .line {
+    height: 2px;
+    width: 15px;
+    border-bottom: 2px solid #ccc; 
+   }
+  

@@ -8,6 +8,7 @@ $background-color: #fff;
 
 body {
   margin: 0;
+  user-select: none;
   line-height: normal;
   background-color: $background-color;
 }
@@ -61,4 +62,9 @@ body {
   border: none;
   height: 50px;
   width: 240px;
+  cursor: pointer;
+}
+
+.pointer{
+  cursor: pointer;
 }

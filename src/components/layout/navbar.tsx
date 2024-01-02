@@ -1,6 +1,6 @@
-import { NavLink , NavLinkProps } from "react-router-dom";
-import { navigationURLs, logoURL, profilePic } from "../assets/constansts";
-import "../styles/navbar.scss";
+import { Link, NavLink  } from "react-router-dom";
+import { navigationURLs, logoURL, profilePic } from "../../assets/constansts";
+import "../../styles/navbar.scss";
 
 
 
@@ -21,7 +21,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="profile-pic">
+        <Link to={'/login'}>
         <img src={profilePic} alt="" />
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { formatText } from "../../common/helper";
 
 interface AboutProps {
   images: any[];
@@ -30,10 +31,7 @@ const About: React.FC<AboutProps> = ({
     setHoveredIndex(null);
   };
 
-  const formatText = (text: string): string[] => {
-    const paragraphs = text.split("<br>").map((paragraph, index) => paragraph);
-    return paragraphs;
-  };
+ 
 
   return (
     <section className={`${sectionName} image-collection-component`}>

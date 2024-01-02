@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/rentals.scss';
+import '../styles/postCard.scss';
 import { PostCard } from '../components';
 import { rentalPosts } from '../assets/constansts';
 
@@ -10,7 +10,7 @@ interface RentalPageProps {
 
 const RentalPage: React.FC<RentalPageProps> = (props) => {
   return (
-   <PostCard data={rentalPosts} type="rental"/>
+   <PostCard data={rentalPosts} type="rent"/>
   );
 };
 

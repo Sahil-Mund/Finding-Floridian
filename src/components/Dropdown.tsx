@@ -13,9 +13,10 @@ const DropDown: React.FC<DropDownProps> = (props) => {
     // Add any additional logic you want to perform when an option is selected
   };
 
-  const dropdownOptions = ['Best Sellers', "New Arrivals", "Price - Low to High", "Price - High to Low", "Rating", "Discounts/Sale","Availability"];
+  const dropdownOptions = ['Location', "Type Of House", "Monthly Amount", "New Constructions"];
 
- 
+
+
   return (
     <div className="dropdown">
       <select
@@ -27,7 +28,7 @@ const DropDown: React.FC<DropDownProps> = (props) => {
           Choose an option
         </option>
         {dropdownOptions.map((option) => (
-          <option key={option} value={option}>
+          <option className='drp-options' key={option} value={option}>
             {option}
           </option>
         ))}

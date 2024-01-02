@@ -1,0 +1,208 @@
+.base-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(106, 112, 76, 0.5);
+
+    cursor: pointer;
+    min-height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+        content: "\2713";
+        position: relative;
+        top: 5px;
+        left: 4px;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        color: #4a3163;
+        font-weight: bold;
+        opacity: 0;
+    }
+
+    &:checked::before {
+        opacity: 1;
+    }
+}
+
+section.user-registration,
+section.user-login,
+section.thankYou-section {
+    padding: 3%;
+    .container-box {
+        background: #f5f1ee;
+        filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
+        width: 62%;
+        margin: auto;
+        padding: 7%;
+        padding-top: 5%;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+
+        .content {
+            h1 {
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 44px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26%;
+                text-transform: uppercase;
+            }
+            h5 {
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 0;
+                text-transform: uppercase;
+            }
+            p {
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+                width: 63%;
+                margin: auto auto 33px auto;
+            }
+        }
+
+        .form-container {
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input[type="text"], input[type="email"], input[type="password"] {
+                    border-radius: 10px;
+                    border: 1px solid #6a704c;
+                    background: #fff;
+                    color: #6a704c;
+                    font-family: Montserrat;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 300;
+                    /* line-height: 41px; */
+                    padding: 2%;
+                    outline: none;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 29px;
+
+                    input[type="checkbox"] {
+                        @extend .base-checkbox;
+                    }
+
+                    span {
+                        text-align: left;
+
+                        p:nth-child(1) {
+                            color: #6a704c;
+                            font-family: Poppins;
+                            font-size: 16px;
+                            font-style: italic;
+                            font-weight: 700;
+                            line-height: 1px;
+                        }
+                        p:nth-child(2) {
+                            color: #6a704c;
+                            font-family: Poppins;
+                            font-size: 14px;
+                            font-style: italic;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .btns {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 29px;
+                    flex-direction: column;
+                    margin-top: 29px;
+                    button {
+                        width: 30%;
+                        margin: auto;
+                        background-color: #6a704c;
+                    }
+
+                    span {
+                        color: #6a704c;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 15px;
+                        font-style: italic;
+                        font-weight: 400;
+                        line-height: normal;
+
+                        a {
+                            color: #6a704c;
+                            font-family: Montserrat;
+                            font-size: 15px;
+                            font-style: italic;
+                            font-weight: 700;
+                            line-height: normal;
+                            text-decoration-line: underline;
+                        }
+                    }
+                }
+
+                .forgotpwd {
+                    display: block;
+                    text-align: right;
+
+                    a {
+                        color: #6a704c;
+                        font-family: Montserrat;
+                        font-size: 15px;
+                        font-style: italic;
+                        font-weight: 700;
+                        line-height: normal;
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+
+        .feedback {
+            h5 {
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 35px;
+                font-style: italic;
+                font-weight: 250;
+                line-height: 51.5px; /* 147.143% */
+                text-transform: uppercase;
+            }
+            p {
+                color: #6a704c;
+                text-align: center;
+                font-family: Campton;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

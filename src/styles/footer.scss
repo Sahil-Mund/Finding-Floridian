@@ -1,0 +1,174 @@
+section.footer-section {
+    background: #f9f4f0;
+    padding: 7% 10%;
+
+    a{
+        text-decoration: none;
+    }
+
+    .contact {
+        display: flex;
+        .info {
+            width: 40%;
+            .follow {
+                p {
+                    color: #6a704c;
+                    font-family: Poppins;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 127%; /* 27.94px */
+                }
+            }
+
+            .details {
+                margin-top: 43px;
+                display: flex;
+                padding: 6% 0;
+                .navs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 40%;
+
+                    span {
+                        color: #000;
+                        font-family: Poppins;
+                        font-size: 19px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 127%;
+                    }
+                }
+            }
+        }
+
+        .connect-form {
+            width: 60%;
+            margin: auto;
+            // background: rgba(245, 241, 238, 0.8);
+            // backdrop-filter: blur(50px);
+
+            h1 {
+                color: #6a704c;
+                font-family: Poppins;
+                font-size: 37px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 58px; /* 107.407% */
+                padding-left: 7%;
+            }
+
+            p {
+                color: #6a704c;
+                font-family: Poppins;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26.5px;
+                width: 98%;
+                padding-left: 7%;
+
+            }
+
+            form {
+                padding: 3%;
+                width: 88%;
+                margin: auto;
+                div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    input {
+                        width: 48%;
+                        height: 43.434px;
+                        flex-shrink: 0;
+                        border-radius: 10px;
+                        border: 1px solid #6a704c;
+                        background: #fff;
+                    }
+                    input::placeholder {
+                        padding-left: 4%;
+                    }
+                    input::selection {
+                        padding-left: 4%;
+                    }
+                }
+
+                input {
+                    height: 43.434px;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    border: 1px solid #6a704c;
+                    background: #fff;
+                    width: 100%;
+                    margin-top: 2%;
+                }
+
+                input::placeholder {
+                    padding-left: 2%;
+                }
+                input::selection {
+                    padding-left: 2%;
+                }
+
+                .btn-primary {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    margin-top: 3%;
+                    font-size: 18px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    hr{
+        margin: 5% 0;
+    }
+
+
+    section.partners-section {
+        margin-top: 0%;
+        .container {
+            width: 69%;
+            margin: auto;
+            padding: 0;
+
+            h3{
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 101%;
+            }
+    
+            .image-items {
+                display: flex;
+                gap: 0px;
+              
+                .item-container{
+                    .item {
+                        img {
+                            width: 84px;
+                        }
+                        h4 {
+                            width: 264px;
+                            line-height: 106%;
+                        }
+                    }
+        
+               
+                }
+    
+               
+            }
+        }
+    }
+    
+}

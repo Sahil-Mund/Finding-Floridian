@@ -1,5 +1,6 @@
 import React from "react";
 import { homeSocialIcons } from "../../assets/constansts";
+// ! Not being used
 
 const HeroSection: React.FC = () => {
   return (

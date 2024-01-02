@@ -1,0 +1,276 @@
+section.questionnaire-hero-section {
+    .hero {
+        width: 100%;
+        margin: auto;
+
+        padding-bottom: 2%;
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 3%;
+            position: relative;
+
+            img {
+                width: 40%;
+                object-fit: cover;
+                height: 562px;
+            }
+        }
+
+        .box-container {
+            position: absolute;
+            top: 32%;
+            left: 30%;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(50px);
+            width: 38em;
+            height: 373px;
+            padding: 4% 2% 0px 2%;
+
+            h2 {
+                height: 99px;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                justify-content: center;
+                align-items: center;
+
+                .light {
+                    color: #6a704c;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 31px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 113%; /* 37.29px */
+                    text-transform: uppercase;
+                    text-align: center;
+                    display: block;
+                }
+                .semibold {
+                    color: #6a704c;
+                    font-family: Poppins;
+                    font-size: 33px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 113%;
+                    text-transform: uppercase;
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            .btn-primary {
+                width: 44%;
+                margin: 2% auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+section.qna-stepper {
+    .box-container {
+        width: 59%;
+        height: 64vh;
+        margin: 4% auto 4% auto;
+        padding: 1% 6% 9% 6%;
+        background: #f5f1ee;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+        filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
+
+        .heading {
+            text-align: center;
+
+            h2 {
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 37px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 94%; /* 48.88px */
+                text-transform: uppercase;
+            }
+            p {
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 113%;
+            }
+        }
+
+        .steps-count {
+            color: #6a704c;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 113%; /* 18.08px */
+            margin: 3%;
+        }
+
+        div[role="progressbar"] {
+            div:first-child {
+                background: #fff !important;
+
+                div {
+                    background: #6a704c !important;
+                }
+            }
+        }
+
+        .qna-box {
+            border-radius: 10px;
+            border: 1px solid #6a704c;
+            background: #fff;
+            margin: 3% 0;
+            padding: 4%;
+
+            .question {
+                color: #6a704c;
+                font-family: Poppins;
+                font-size: 20px;
+                font-style: italic;
+                font-weight: 600;
+                line-height: 26px;
+                margin-bottom: 3%;
+            }
+
+            .options {
+                display: flex;
+                flex-wrap: wrap;
+                .option-item {
+                    flex-basis: 33.33%;
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    span {
+                        color: #6a704c;
+                        font-family: Poppins;
+                        font-size: 17px;
+                        font-style: italic;
+                        font-weight: 300;
+                        line-height: normal;
+                    }
+
+                    input[type="checkbox"],
+                    input[type="radio"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        background-color: #f5f1ee;
+                        cursor: pointer;
+                        min-height: 40px;
+                        margin-bottom: 10px;
+                        border-radius: 10px;
+                        width: 40px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    input[type="checkbox"]::before,
+                    input[type="radio"]::before {
+                        content: "\2713";
+                        position: relative;
+                        top: 5px;
+                        left: 4px;
+                        transform: translate(-50%, -50%);
+                        font-size: 20px;
+                        color: #4a3163;
+                        font-weight: bold;
+                        opacity: 0;
+                    }
+                    input[type="checkbox"]:checked::before,
+                    input[type="radio"]:checked::before {
+                        opacity: 1;
+                    }
+                }
+
+                .option-rating-item {
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 2%;
+                    span {
+                        color: #6a704c;
+                        font-family: Poppins;
+                        font-size: 17px;
+                        font-style: italic;
+                        font-weight: 400;
+                        line-height: 26px; /* 130% */
+                    }
+                    // flex-direction: column;
+                }
+            }
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                cursor: pointer;
+            }
+
+            .btn-next {
+                border-radius: 10px;
+                background: #fff;
+                border: 1px solid #fff;
+                align-items: center;
+                display: flex;
+                gap: 20px;
+                padding: 0.8%;
+                color: #6a704c;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 113%;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+
+            .btn-primary {
+                background: #6a704c;
+                cursor: pointer;
+            }
+
+            .submit-loader {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .other-user-input {
+        border-radius: 10px;
+        background: #f5f1ee;
+        color: #6a704c;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: normal;
+        outline: none;
+        border: none;
+        padding: 7%;
+    }
+}
