@@ -28,10 +28,21 @@ export { ReactComponent as DownArrowIcon } from "./home-tour/down-arrow.svg";
 export { ReactComponent as PreviousArrowIcon } from "./stepper/prev-btn.svg";
 export { ReactComponent as NextArrowIcon } from "./stepper/next-btn.svg";
 
-
 export { ReactComponent as HomeSmIcon } from "./postcard/home.svg";
 export { ReactComponent as BedRoomSmIcon } from "./postcard/bedroom.svg";
 export { ReactComponent as BathSmIcon } from "./postcard/bath.svg";
 export { ReactComponent as LocationSmIcon } from "./postcard/location.svg";
 export { ReactComponent as LockIcon } from "./postcard/lock.svg";
 export { ReactComponent as UnlockIcon } from "./postcard/unlock.svg";
+
+export { ReactComponent as InstaIcon } from "./home/insta.svg";
+export { ReactComponent as FbIcon } from "./home/fb.svg";
+export { ReactComponent as TiktokIcon } from "./home/tiktok.svg";
+export { ReactComponent as YoutubeIcon } from "./home/youtube.svg";
+export { ReactComponent as PlayBtnIcon } from "./home/play-btn.svg";
+
+export { ReactComponent as Partner1 } from "./footer/1.svg";
+export { ReactComponent as Partner2 } from "./footer/2.svg";
+export { ReactComponent as Partner3 } from "./footer/3.svg";
+export { ReactComponent as Partner4 } from "./footer/4.svg";
+export { ReactComponent as Partner5 } from "./footer/5.svg";

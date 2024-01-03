@@ -9,6 +9,8 @@ interface VideoGalleryProps {
 }
 
 const VideoGallery: React.FC<VideoGalleryProps> = ({ videos }) => {
+  
+
   return (
     <div className="container-box">
       <div className="content">
@@ -19,13 +21,13 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ videos }) => {
           <div>
             <UpDownIcon />
             <DropDown />
-            <DownArrowIcon />
+            {/* <DownArrowIcon /> */}
           </div>
         </div>
       </div>
       <div className="gallery">
         {videos?.map((videoSource, index) => (
-          <Video key={index} url={videoSource} />
+          <Video key={index} url={videoSource}  />
         ))}
       </div>
     </div>

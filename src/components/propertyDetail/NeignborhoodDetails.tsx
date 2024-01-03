@@ -57,9 +57,15 @@ const NeignborhoodDetails: React.FC<NeignborhoodDetailsProps> = ({ data }) => {
         ></iframe>
 
         <div>
-          <ShareIcon
-            style={{ position: "absolute", top: "1%", right: "10px" }}
-          />
+          <a
+            href="https://www.google.com/maps/place/14300+State+Hwy+121,+Frisco,+TX+75035,+USA/@33.120122,-96.753163,16z/data=!4m6!3m5!1s0x864c3d7f68ed6cbd:0x9fb6054db03ff47b!8m2!3d33.1201221!4d-96.753163!16s%2Fg%2F11gfp907wz?hl=en&entry=ttu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ShareIcon
+              style={{ position: "absolute", top: "1%", right: "10px" }}
+            />
+          </a>
         </div>
       </div>
     </div>

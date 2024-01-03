@@ -4,6 +4,7 @@ import {
   HomePage,
   HomeTour,
   LogIn,
+  NotFound,
   PropertyDetailGallery,
   QuestionnaireLandingPage,
   RentalPage,
@@ -11,7 +12,12 @@ import {
   ShopPage,
   SignUp,
 } from "./views";
-import { ChatBotButton, Navbar, QStepper, RecommendationPostCard } from "./components";
+import {
+  ChatBotButton,
+  Navbar,
+  QStepper,
+  RecommendationPostCard,
+} from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/layout/footer";
 import { salesPosts } from "./assets/constansts";
@@ -49,6 +55,9 @@ function App() {
             path="/property-detail/gallery"
             element={<PropertyDetailGallery />}
           />
+
+          {/* Not found route */}
+          <Route element={<NotFound />} />
         </Routes>
         {isFooterVisibleToCurrentRoute && <Footer />}
       </BrowserRouter>

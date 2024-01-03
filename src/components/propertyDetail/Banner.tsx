@@ -46,7 +46,9 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
           <span>{data.price}</span>
           <span>{data.freq}</span>
         </div>
+        <Link to={'/contact-us'}>
         <button className="btn-primary">{data.buttonLabel}</button>
+        </Link>
       </div>
     </section>
   );

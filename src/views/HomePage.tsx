@@ -1,5 +1,5 @@
 import React from "react";
-import { VideoSlider, Content, About, ChatBotButton } from "../components";
+import { VideoSlider, Content, About } from "../components";
 import { videoUrls, homeAboutImages } from "../assets/constansts";
 
 import "../styles/home.scss";
@@ -19,13 +19,13 @@ const HomePage: React.FC<HomePageProps> = (props) => {
         heading="I'm Carter Long"
         subHeading="Your Home Girl."
         direction="forward"
-        para="Use of AI technology to simplify the process of finding the perfect home in the Sunshine State. Whether you're renting, buying, or exploring Florida's beautiful locations, our mission is to match your unique needs with the ideal properties, making your journey both effortless and enjoyable."
+        para="About me blurb. Use of Al technology to ​simplify the process of finding the perfect ​home in the Sunshine State. Whether you're renting, buying, or exploring ​Florida's beautiful locations, our mission is to ​match your unique needs with the ideal ​properties, making your journey both ​effortless and enjoyable."
       />
 
       <About
         sectionName="about-section"
         images={homeAboutImages}
-        title="What Sets me Apart"
+        title="What Sets Us Apart"
         visibleHeading={true}
         isHoverEffect={true}
       />

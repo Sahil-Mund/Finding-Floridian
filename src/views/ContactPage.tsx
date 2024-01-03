@@ -86,7 +86,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
         <div className="image-container">
           <img
             className="svg-overlay"
-            alt=""
+            alt="banner-overlay"
             src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/86b75781-0786-4df7-880e-3211816ea6ad.png"
           />
 
@@ -109,14 +109,14 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
               <input
                 type="text"
                 name="firstName"
-                placeholder="First Name:"
+                placeholder="First Name*"
                 value={formData.firstName}
                 onChange={handleChange}
               />
               <input
                 type="text"
                 name="lastName"
-                placeholder="Last Name:"
+                placeholder="Last Name*"
                 value={formData.lastName}
                 onChange={handleChange}
               />
@@ -125,14 +125,14 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
               <input
                 type="tel"
                 name="phoneNumber"
-                placeholder="Phone Number:"
+                placeholder="Phone Number*"
                 value={formData.phoneNumber}
                 onChange={handleChange}
               />
               <input
                 type="email"
                 name="email"
-                placeholder="Email:"
+                placeholder="Email*"
                 value={formData.email}
                 onChange={handleChange}
               />

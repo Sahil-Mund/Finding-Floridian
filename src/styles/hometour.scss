@@ -62,32 +62,27 @@ section.home-tour-section {
                             font-style: normal;
                             font-weight: 400;
                             line-height: normal;
-                            // width: 158px;
-                            padding: 22px;
+                            padding: 14px;
+                            padding-right: 19px;
 
                             // to remove the down arrow icon
-                            appearance: none;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
+                            // appearance: none;
+                            // -webkit-appearance: none;
+                            // -moz-appearance: none;
                             text-indent: 1px;
                             text-overflow: "";
 
                             option {
-                                padding: 5px 10px; /* Add padding to the options */
+                                padding: 5px 10px;
                                 text-indent: 5px;
                                 border-radius: 15px;
                                 background-color: #f5f1ee;
-                                border: 1px solid green;
 
-                                &:checked, &:hover{
+                                &:checked,
+                                &:hover {
                                     background-color: #6a704c;
                                     color: #f5f1ee;
                                 }
-
-                                &::after{
-                                    content: '';
-                                }
-                            
                             }
                         }
                     }
@@ -96,15 +91,19 @@ section.home-tour-section {
         }
 
         .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            max-width: 900px; // Adjust as needed
-            margin: 0 auto;
+            // display: flex;
+            // justify-content: space-around;
+            // flex-wrap: wrap;
+            // max-width: 900px; // Adjust as needed
+            // margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(11.25rem, 100%), 1fr));
+            grid-gap: 1rem;
 
             .video-container {
                 position: relative;
-                width: 30%;
+                width: 100%;
                 margin: 10px;
                 video {
                     height: 326px;
@@ -126,9 +125,22 @@ section.home-tour-section {
                 //     cursor: pointer;
                 // }
                 .play-button-overlay {
-                    top: 44%;
-                    padding-left: 40%;
                     position: absolute;
+                    top: 52%;
+                    margin-left: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                    opacity: 0.7;
+                    transition: opacity 0.3s ease;
+
+                    svg {
+                        width: 82%;
+                        height: 90px;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
             }
         }

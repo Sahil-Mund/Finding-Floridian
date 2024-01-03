@@ -53,7 +53,7 @@ const QStepper: React.FC<QStepperProps> = (props) => {
         options: selectedOption,
       },
     }));
-    console.log(formData);
+    // console.log(formData);
   };
   // const handleCheckboxOptionSelect = (selectedOption: string) => {
   //   setFormData((prevData) => ({
@@ -132,6 +132,8 @@ const QStepper: React.FC<QStepperProps> = (props) => {
       }
     }
     const data = { ...formData, 4: rating[4] };
+
+    
     const queryParams = new URLSearchParams(location.search);
     const type = queryParams.get("type");
 
@@ -271,7 +273,12 @@ const QStepper: React.FC<QStepperProps> = (props) => {
             ))}
           </div>
         </form>
-        <div className="btns">
+        <div
+          className="btns"
+          style={{
+            justifyContent: currentStep === 1 ? "flex-end" : "space-between",
+          }}
+        >
           {currentStep !== 1 && (
             <span onClick={renderPrevStep}>
               <PreviousArrowIcon />
@@ -309,7 +316,7 @@ const QStepper: React.FC<QStepperProps> = (props) => {
             </>
           ) : (
             <button onClick={renderNextStep} className="btn-next" type="button">
-              NEXT
+              <span>NEXT</span>
               <NextArrowIcon />
             </button>
           )}

@@ -2,7 +2,7 @@ section.footer-section {
     background: #f9f4f0;
     padding: 7% 10%;
 
-    a{
+    a {
         text-decoration: none;
     }
 
@@ -10,21 +10,36 @@ section.footer-section {
         display: flex;
         .info {
             width: 40%;
-            .follow {
-                p {
-                    color: #6a704c;
-                    font-family: Poppins;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: 127%; /* 27.94px */
+
+            div {
+                padding-top: 10px;
+                .follow {
+                    p {
+                        color: #6a704c;
+                        font-family: Poppins;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 127%; /* 27.94px */
+                    }
+                }
+
+                .social-icons {
+                    display: flex;
+                    gap: 20px;
+                    a {
+                        svg {
+                            height: 30px;
+                            width: 47px;
+                        }
+                    }
                 }
             }
 
             .details {
-                margin-top: 43px;
+                margin-top: 85px;
                 display: flex;
-                padding: 6% 0;
+                // padding: 6% 0;
                 .navs {
                     display: flex;
                     flex-direction: column;
@@ -68,7 +83,6 @@ section.footer-section {
                 line-height: 26.5px;
                 width: 98%;
                 padding-left: 7%;
-
             }
 
             form {
@@ -126,19 +140,14 @@ section.footer-section {
         }
     }
 
-    hr{
-        margin: 5% 0;
-    }
-
-
-    section.partners-section {
+    .partners-section {
         margin-top: 0%;
         .container {
             width: 69%;
             margin: auto;
             padding: 0;
 
-            h3{
+            h3 {
                 color: #6a704c;
                 text-align: center;
                 font-family: Poppins;
@@ -147,28 +156,26 @@ section.footer-section {
                 font-weight: 500;
                 line-height: 101%;
             }
-    
+
             .image-items {
                 display: flex;
-                gap: 0px;
-              
-                .item-container{
+                justify-content: center;
+                gap: 77px;
+
+                .item-container {
                     .item {
-                        img {
-                            width: 84px;
+                        svg {
+                            cursor: pointer;
+                            width: 82px;
+                            height: 71px;
                         }
                         h4 {
                             width: 264px;
                             line-height: 106%;
                         }
                     }
-        
-               
                 }
-    
-               
             }
         }
     }
-    
 }

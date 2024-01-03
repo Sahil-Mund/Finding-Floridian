@@ -1,5 +1,4 @@
 import React from "react";
-import { homeSocialIcons } from "../../assets/constansts";
 // ! Not being used
 
 const HeroSection: React.FC = () => {
@@ -42,11 +41,11 @@ const HeroSection: React.FC = () => {
             viewBox="0 0 213 27"
             fill="none"
           >
-            {homeSocialIcons.map((ele, index) => (
+            {/* {homeSocialIcons.map((ele, index) => (
               <a href={ele.url} key={index} target="_blank" rel="noreferrer">
                 <path d={ele.path} fill="#6A704C" />
               </a>
-            ))}
+            ))} */}
           </svg>
         </div>
       </div>

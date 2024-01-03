@@ -21,9 +21,10 @@ section.hero-section {
         .box-container {
             position: absolute;
             top: 32%;
-            left: 30%;
+            left: 26%;
             border-radius: 12px;
-            background: rgba(255, 255, 255, 0.8);
+            // background: rgba(255, 255, 255, 0.8);
+            background: #f9f4f0;
             backdrop-filter: blur(50px);
             width: 38em;
             height: 373px;
@@ -73,25 +74,37 @@ section.hero-section {
             }
         }
 
-        .follow {
-            p {
-                color: #6a704c;
-                text-align: center;
-                font-family: Poppins;
-                font-size: 22px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: 127%;
-                text-align: center;
+        .social-section {
+            margin-top: 42px;
+            .follow {
+                p {
+                    color: #6a704c;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 127%;
+                    text-align: center;
+                }
             }
-        }
 
-        .social-icons {
-            svg {
+            .social-icons {
                 display: flex;
-                margin: auto;
-                padding-top: 2%;
-                cursor: pointer;
+                justify-content: center;
+                gap: 20px;
+                a {
+                    display: flex;
+
+                    justify-content: center;
+                    gap: 20px;
+
+                    svg {
+                        cursor: pointer;
+                        height: 30px;
+                        width: 54px;
+                    }
+                }
             }
         }
     }
@@ -115,6 +128,16 @@ section.video-slider-section {
             cursor: pointer;
         }
 
+        svg.naviagte-icon {
+            cursor: pointer;
+            width: 80px;
+            height: 80px;
+            circle,
+            path {
+                stroke: grey;
+            }
+        }
+
         .slider-container {
             display: flex;
             overflow-x: scroll;
@@ -136,7 +159,8 @@ section.video-slider-section {
                     video {
                         border-radius: 4px;
                         object-fit: cover;
-                        height: 326px;
+                        // height: 326px;
+                        height: 400px;
                         width: 94%;
                     }
                 }
@@ -150,15 +174,20 @@ section.video-slider-section {
         .play-button-overlay {
             position: absolute;
             top: 58%;
-            padding-left: 18%;
+            margin-left: 10%;
             transform: translate(-50%, -50%);
             cursor: pointer;
             opacity: 0.7;
             transition: opacity 0.3s ease;
 
-            img {
-                width: 50px; // Adjust the width of the play button image
-                height: 50px; // Adjust the height of the play button image
+            // img {
+            //     width: 50px; // Adjust the width of the play button image
+            //     height: 50px; // Adjust the height of the play button image
+            // }
+
+            svg {
+                width: 100%;
+                height: 90px;
             }
 
             &:hover {
@@ -302,15 +331,20 @@ section.about-section {
                 .item {
                     img {
                         // width: 149%;
-                        width: 76%;
+                        // width: 76%;
                         // aspect-ratio: 3/2;
-                        object-fit: contain;
+                        // object-fit: contain;
+                        // max-height: 257px;
+                        // min-height: 257px;
+
+                        width: 227px;
+                        height: 248px;
+                        object-fit: cover;
                         max-height: 257px;
-                        min-height: 257px;
                     }
                     h4 {
                         width: 264px;
-                        line-height: 106%;
+                        line-height: 119%;
                     }
                 }
 
@@ -318,11 +352,11 @@ section.about-section {
                     width: 220px;
                     height: 220px;
                     flex-shrink: 0;
-                    border-radius: 10px;
+                    // border-radius: 10px;
                     border: 1px solid #6a704c;
                     background: #fff;
                     position: absolute;
-                    top: 5%;
+                    top: 3%;
                     margin-left: 2%;
                     transition: transform 0.3s ease;
 

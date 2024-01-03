@@ -1,5 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
-import { playBtnImg } from "../../assets/constansts";
+import { useNavigate } from "react-router-dom";
+
+import { PlayBtnIcon } from "../../assets/svg";
 
 interface VideoProps {
   url: string;
@@ -7,8 +9,9 @@ interface VideoProps {
 
 const Video: React.FC<VideoProps> = ({ url }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -27,6 +30,10 @@ const Video: React.FC<VideoProps> = ({ url }) => {
       }
     };
   }, []);
+
+  const handleClick = () => {
+    navigate("/buy");
+  };
 
   // const handleMouseOver = () => {
   //   setIsHovered(true);
@@ -67,7 +74,6 @@ const Video: React.FC<VideoProps> = ({ url }) => {
 
   return (
     <div className="video-container">
-      
       <video
         ref={videoRef}
         controls={false}
@@ -77,12 +83,14 @@ const Video: React.FC<VideoProps> = ({ url }) => {
         muted // Mute the video
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
+        onClick={handleClick}
+        style={{ cursor: "pointer" }}
       />
 
-    
       {!isHovered && isVideoLoaded && (
         <div className="play-button-overlay">
-          <img src={playBtnImg} alt="Play Button" />
+          {/* <img src={playBtnImg} alt="Play Button" /> */}
+          <PlayBtnIcon />
         </div>
       )}
     </div>

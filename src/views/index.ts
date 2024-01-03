@@ -9,4 +9,5 @@ export { default as QuestionnaireLandingPage } from "./QuestionnaireLandingPage"
 export { default as PropertyDetailGallery } from "./PropertyDetailGallery";
 export { default as SignUp } from "./SignUp";
 export { default as LogIn } from "./LogIn";
+export { default as NotFound } from "./NotFound";
 

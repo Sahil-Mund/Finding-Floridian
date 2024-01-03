@@ -4,8 +4,9 @@ section.shop {
         width: 100%;
 
         .banner {
-            width: 85%;
-            padding-bottom: 3%;
+            width: 79%;
+            gap: 48px;
+            padding-bottom: 4%;
             margin: auto;
             background: #f9f4f0;
             display: flex;
@@ -22,6 +23,7 @@ section.shop {
                     font-weight: 600;
                     line-height: 113%;
                     text-transform: uppercase;
+                    margin-bottom: 5px;
                 }
 
                 p:nth-child(2) {
@@ -32,7 +34,7 @@ section.shop {
                     font-weight: 400;
                     line-height: 113%;
                     text-transform: uppercase;
-                    margin-top: -48px;
+                    margin-top: 0;
                 }
             }
 
@@ -43,7 +45,10 @@ section.shop {
                 display: flex;
                 gap: 14px;
                 img {
-                    object-fit: contain;
+                    object-fit: cover;
+                    width: 107%;
+                    height: 106%;
+                    max-width: 235px;
                 }
             }
         }
@@ -79,6 +84,7 @@ section.shop {
                         font-style: normal;
                         font-weight: 400;
                         line-height: 113%;
+                        text-align: center;
                     }
                 }
             }

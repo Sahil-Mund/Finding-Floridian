@@ -8,7 +8,7 @@ import {
   Gallery,
 } from "../components";
 import { apartmanetDetails, dummyApartmentDetails } from "../assets/constansts";
-import "../styles/post-detail.scss";
+import "../styles/property-detail.scss";
 
 interface PropertyDetailProps {
   // Add your component's props here
@@ -18,9 +18,9 @@ const PropertyDetail: React.FC<PropertyDetailProps> = (props) => {
   const { banner, neighbourHood, gallery, ...apartmentInfo } =
     apartmanetDetails;
 
-  const {
-    state: { data },
-  } = useLocation();
+  // const {
+  //   state: { data },
+  // } = useLocation();
   const [unLock, setUnLock] = useState<boolean>(false);
   const [ispremiumUser, setIspremiumUser] = useState<boolean>(false);
 
@@ -31,7 +31,7 @@ const PropertyDetail: React.FC<PropertyDetailProps> = (props) => {
     }, 3000);
   };
   return (
-    <div className="container">
+    <div className="property-container">
       <Banner data={banner} />
       <NeignborhoodDetails data={neighbourHood} />
       <ApartmentInfo data={ispremiumUser ? apartmentInfo : dummyApartmentDetails} 

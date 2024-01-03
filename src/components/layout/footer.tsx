@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
-import About from "../home/About";
-import { partners, navigationURLs } from "../../assets/constansts";
+import { navigationURLs } from "../../assets/constansts";
 import SocialIcon from "../home/SocialIcon";
 import { Link, useLocation } from "react-router-dom";
 
 import "../../styles/footer.scss";
-import { url } from "inspector";
 import { useForm } from "../../hooks/useForm";
+import {
+  Partner1,
+  Partner2,
+  Partner3,
+  Partner4,
+  Partner5,
+} from "../../assets/svg";
 
 interface FooterProps {
   // Add your component's props here
@@ -20,7 +25,7 @@ interface NavLink {
 
 const Footer: React.FC<FooterProps> = (props) => {
   const location = useLocation();
-  const [navlinksToShow, setNavlinksToShow] = useState<NavLink[]>([]);
+  // const [navlinksToShow, setNavlinksToShow] = useState<NavLink[]>([]);
 
   const { formData, handleChange, resetForm } = useForm({
     firstName: "",
@@ -65,6 +70,8 @@ const Footer: React.FC<FooterProps> = (props) => {
     resetForm();
   };
 
+  const partners = [Partner1, Partner2, Partner3, Partner4, Partner5];
+
   const extraInfos = [
     {
       displayName: "Realtors",
@@ -83,18 +90,36 @@ const Footer: React.FC<FooterProps> = (props) => {
       url: "",
     },
   ];
+  const navlinksToShow = [
+    {
+      displayName: "Rent",
+      url: "/rent",
+    },
+    {
+      displayName: "Buy",
+      url: "/buy",
+    },
+    {
+      displayName: "Home Tours",
+      url: "/home-tour",
+    },
+    {
+      displayName: "Contact us",
+      url: "/contact-us",
+    },
+  ];
 
-  useEffect(() => {
-    const firstPart = location.pathname.split("/")[1];
+  // useEffect(() => {
+  //   const firstPart = location.pathname.split("/")[1];
 
-    // displays the navigations URLs except the current path
-    const navlinks = navigationURLs.filter((ele) => {
-      if (firstPart === "") return ele.url !== "/";
-      else return ele.url.replace("/", "") !== firstPart;
-    });
+  //   // displays the navigations URLs except the current path
+  //   const navlinks = navigationURLs.filter((ele) => {
+  //     if (firstPart === "") return ele.url !== "/";
+  //     else return ele.url.replace("/", "") !== firstPart;
+  //   });
 
-    setNavlinksToShow(navlinks.filter((ele) => ele.displayName !== "Shop"));
-  }, [location]);
+  //   setNavlinksToShow(navlinks.filter((ele) => ele.displayName !== "Shop"));
+  // }, [location]);
 
   return (
     <section className="footer-section">
@@ -119,10 +144,10 @@ const Footer: React.FC<FooterProps> = (props) => {
           </div>
         </div>
         <div className="connect-form">
-          <h1>Connect with your Home Girl</h1>
+          <h1>Connect with your Home Girl!</h1>
           <p>
-            Join the finding Floridians community to get all the latest updates,
-            home tours, & your Home Girl adventures.
+            Join the Finding Floridians community for all ​adventures with your
+            Home Girl.
           </p>
 
           <form onSubmit={handleSubmit}>
@@ -130,14 +155,14 @@ const Footer: React.FC<FooterProps> = (props) => {
               <input
                 type="text"
                 name="firstName"
-                placeholder="First Name:"
+                placeholder="First Name*"
                 value={formData.firstName}
                 onChange={handleChange}
               />
               <input
                 type="text"
                 name="lastName"
-                placeholder="Last Name:"
+                placeholder="Last Name*"
                 value={formData.lastName}
                 onChange={handleChange}
               />
@@ -146,14 +171,14 @@ const Footer: React.FC<FooterProps> = (props) => {
               <input
                 type="tel"
                 name="phoneNumber"
-                placeholder="Phone Number:"
+                placeholder="Phone Number*"
                 value={formData.phoneNumber}
                 onChange={handleChange}
               />
               <input
                 type="email"
                 name="email"
-                placeholder="Email:"
+                placeholder="Email*"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -161,8 +186,8 @@ const Footer: React.FC<FooterProps> = (props) => {
             <button
               className="btn-primary"
               type="submit"
-              disabled={btnDisabled}
-              style={{ opacity: btnDisabled ? 0.5 : 1 }}
+              // disabled={btnDisabled}
+              // style={{ opacity: btnDisabled ? 0.5 : 1 }}
             >
               Contact Me!
             </button>
@@ -171,13 +196,21 @@ const Footer: React.FC<FooterProps> = (props) => {
       </div>
 
       <hr />
-      <About
-        sectionName="partners-section"
-        images={partners}
-        visibleHeading={false}
-        isHoverEffect={false}
-        title="Partners"
-      />
+      <div className={`partners-section`}>
+        <div className="container">
+          <h3 style={{ textTransform: "uppercase" }}>Partners</h3>
+          <div className="image-items">
+            {partners?.map((PartnerIcons, index) => (
+              <div className="item-container" key={index}>
+                {" "}
+                <div className="item">
+                  <PartnerIcons />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

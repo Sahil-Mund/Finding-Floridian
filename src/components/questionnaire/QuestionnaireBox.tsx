@@ -14,8 +14,8 @@ const QuestionnaireBox: React.FC<QuestionnaireBoxProps> = (props) => {
   return (
     <div className="box-container">
       <h2>
-        <span className="light"> Tell me about your preferences, & </span>{" "}
-        <span className="semibold"> I'll help you find the Perfect Home</span>
+        <span className="light"> Tell me about your preferences,</span>{" "}
+        <span className="semibold">& I'll help you find the Perfect Home</span>
       </h2>
 
       <button className="btn-primary" onClick={() => handleClick('buy')}>

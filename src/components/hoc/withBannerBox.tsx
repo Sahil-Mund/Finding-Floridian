@@ -10,7 +10,7 @@ const withBannerBox = <P extends object>(WrappedComponent: React.FC<P>, showSoci
       <div className="hero">
         <div className="image-container">
           <img
-            src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/fb4b9172-cb00-4bf5-b080-fae31fb9c8d8.png"
+            src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/28873705-a8e0-4866-bd0e-2a3e48ddb30c.webp"
             alt=""
           />
           <img

@@ -41,8 +41,10 @@
                 text-decoration: none;
             }
 
-            a.active{
-                color: red;
+            .active{
+                li{
+                    font-weight: 700;
+                }
             }
         }
     }

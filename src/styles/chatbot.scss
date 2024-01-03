@@ -28,12 +28,14 @@
         /* padding: 52%; */
         width: 100%;
         background: red;
-        border-radius: 20px;
         border-radius: 69.5px;
-        background: rgba(106, 112, 76, 0.1);
-        backdrop-filter: blur(50px);
+        // background: rgba(106, 112, 76, 0.1);
+        // backdrop-filter: blur(50px);
+        // background: rgba(255, 255, 255, 0.1); /* Adjust the background color and opacity */
+        background-color: #8b8b8b;
+        backdrop-filter: blur(10px);
 
-        div:nth-child(1) {
+        .bot-image {
             width: 21%;
 
             img {
@@ -44,7 +46,7 @@
             }
         }
 
-        div:nth-child(2) {
+        .hovered-content {
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -67,7 +69,27 @@
                 line-height: 20px;
             }
         }
+
+        // .hovered-content {
+        //     opacity: 0;
+
+        //     transform: translateX(-20px);
+        //     transition:
+        //         opacity 0.3s ease-in-out,
+        //         transform 0.3s ease-in-out;
+        // }
     }
+
+    // &:hover {
+        // .hovered-content {
+        //     opacity: 1;
+        //     transform: translateX(0);
+        // }
+        // .bot-overlay{
+        //     display: flex;
+        //     flex-direction: row-reverse;
+        // }
+    // }
 }
 
 .chat-modal {

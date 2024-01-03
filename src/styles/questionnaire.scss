@@ -21,9 +21,11 @@ section.questionnaire-hero-section {
         .box-container {
             position: absolute;
             top: 32%;
-            left: 30%;
+            left: 24%;
             border-radius: 12px;
-            background: rgba(255, 255, 255, 0.8);
+
+            // background: rgba(255, 255, 255, 0.8);
+            background: #f9f4f0;
             backdrop-filter: blur(50px);
             width: 38em;
             height: 373px;
@@ -41,7 +43,7 @@ section.questionnaire-hero-section {
                     color: #6a704c;
                     text-align: center;
                     font-family: Poppins;
-                    font-size: 31px;
+                    font-size: 29px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: 113%; /* 37.29px */
@@ -52,7 +54,7 @@ section.questionnaire-hero-section {
                 .semibold {
                     color: #6a704c;
                     font-family: Poppins;
-                    font-size: 33px;
+                    font-size: 25px;
                     font-style: normal;
                     font-weight: 300;
                     line-height: 113%;
@@ -233,14 +235,14 @@ section.qna-stepper {
                 border: 1px solid #fff;
                 align-items: center;
                 display: flex;
-                gap: 20px;
+                gap: 15px;
                 padding: 0.8%;
                 color: #6a704c;
                 text-align: center;
                 font-family: Poppins;
                 font-size: 12px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 600;
                 line-height: 113%;
                 text-transform: uppercase;
                 cursor: pointer;

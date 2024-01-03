@@ -35,7 +35,7 @@ const InstaPost: React.FC<InstaPostProps> = ({ recentPosts }) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //TODO: Add your form submission logic here
+    //TODO: Add  form submission logic here
     console.log("Form submitted:", formData);
     setFormData({
       firstName: "",

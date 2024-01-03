@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface ContentProps {
   image: string;
@@ -15,9 +16,15 @@ const Content: React.FC<ContentProps> = ({
   direction,
   para,
 }) => {
+  const navigate = useNavigate();
+
   const cssContent: React.CSSProperties = {
     flexDirection: direction === "forward" ? "row" : "row-reverse",
   };
+
+  const handleContactMe = () => {
+    navigate('/contact-us')
+  }
 
   return (
     <section className="content-section" >
@@ -30,7 +37,7 @@ const Content: React.FC<ContentProps> = ({
         <div>{heading}</div>
         <div>{subHeading}</div>
         <p> {para}</p>
-        <button className="btn-primary"> Contact Me </button>
+        <button className="btn-primary" onClick={handleContactMe}> Contact Me! </button>
 
       </div>
     </div>

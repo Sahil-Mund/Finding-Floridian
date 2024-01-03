@@ -29,12 +29,10 @@ const PropertyDetailGallery: React.FC<PropertyDetailGalleryProps> = (props) => {
     setCurrentSecondImageIdx((prev) => prev - 2);
   };
   const handleNextClick = () => {
-    //14
-    //13,14
-    if (currentSecondImageIdx === images.length - 1) {
-      console.log("currentFirstImageIdx", currentFirstImageIdx);
-      console.log("currentSecondImageIdx", currentSecondImageIdx);
-
+    if (
+      currentSecondImageIdx === images.length - 1 ||
+      currentFirstImageIdx + 1 === images.length
+    ) {
       return;
     }
     setCurrentFirstImageIdx((prev) => prev + 2);
