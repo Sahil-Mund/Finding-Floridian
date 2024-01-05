@@ -17,9 +17,10 @@ import {
   Navbar,
   QStepper,
   RecommendationPostCard,
+  Footer,
+  ScrollToTop,
 } from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./components/layout/footer";
 import { salesPosts } from "./assets/constansts";
 import PropertyDetail from "./views/PropertyDetail";
 
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <ChatBotButton />
 
@@ -57,7 +59,7 @@ function App() {
           />
 
           {/* Not found route */}
-          <Route element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         {isFooterVisibleToCurrentRoute && <Footer />}
       </BrowserRouter>

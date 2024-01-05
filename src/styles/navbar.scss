@@ -7,7 +7,8 @@
     border-bottom: 1px solid #6a704c;
     .logo {
         img {
-            width: 126px;
+            object-fit: contain;
+            width: 317px;
             height: 82px;
         }
     }

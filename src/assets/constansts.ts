@@ -1,5 +1,4 @@
-export const logoURL =
-  "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/0f3853d6-d8bb-4dd3-b30d-8d29e84f7ab4.png";
+export const logoURL = "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c3dd71e7-7a51-4474-a5c0-f59ae0e3e84e.png"
 export const profilePic =
   "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/717d639b-8d5c-479a-961f-052d91f8624e.png";
 

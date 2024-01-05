@@ -3,11 +3,25 @@ import { chatDetails } from "../../assets/constansts";
 import { EmojiKeyboard } from "reactjs-emoji-keyboard";
 
 import { CloseIcon, EmojiIcon, SubmitArrowIcon } from "../../assets/svg";
+import { getAIRepsonse } from "../../backend";
 
 interface ChatModalProps {
   isOpen: boolean;
   handleModalOpen: any;
 }
+
+const Typing: React.FC = () => (
+  <div className="typing">
+    <div className="para">
+      <p>typing</p>
+    </div>
+    <div className="dots">
+      <div className="typing__dot"></div>
+      <div className="typing__dot"></div>
+      <div className="typing__dot"></div>
+    </div>
+  </div>
+);
 
 const ChatModal: React.FC<ChatModalProps> = ({ isOpen, handleModalOpen }) => {
   const botAvatar =
@@ -19,6 +33,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, handleModalOpen }) => {
   const [chats, setChats] = useState<any>(chatDetails);
   const [showEmojiKeyboard, setShowEmojiKeyboard] = useState<boolean>(false);
   const [currentDate, setCurrentDate] = useState("");
+  const [botTyping, seBotTyping] = useState<any>();
 
   const messageContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -43,7 +58,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, handleModalOpen }) => {
     }
   };
 
-  const handleChatSubmit = () => {
+  const handleChatSubmit = async () => {
     if (!inputText) return;
 
     const userMsg = {
@@ -51,15 +66,24 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, handleModalOpen }) => {
       bot: false,
       message: inputText,
     };
+
+    setChats((prev: any) => [...prev, userMsg]);
+    seBotTyping(true);
+    setInputText((prev) => "");
+
+    const reply = await getAIRepsonse(inputText);
+    seBotTyping(false);
+
     const botMsg = {
       seq: 11,
       bot: true,
       message:
-        "Thank you for your response, we'll definately get back to you on this.",
+        reply && reply.success
+          ? reply.message.content
+          : "Facing some connectivity issue, We're trying to connect you with the AI !!",
     };
-    setChats((prev: any) => [...prev, userMsg, botMsg]);
-    setInputText((prev) => "");
-    console.log(inputText);
+
+    setChats((prev: any) => [...prev, botMsg]);
   };
 
   const handleEmojiSelection = (emoji: any) => {
@@ -87,20 +111,44 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, handleModalOpen }) => {
               key={`msg-${index}`}
             >
               <div className="message">
-                <p>{msg.message}</p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: msg.message.replace(/\n/g, "<br>"),
+                  }}
+                ></p>
+
+                {/* <p dangerouslySetInnerHTML={_html: msg.message}>{msg.message}</p> */}
               </div>
               <div className="user-icon">
                 <img src={msg.bot ? botAvatar : userAvatar} alt="avatar-icon" />
               </div>
             </div>
           ))}
+
+          {botTyping && (
+            <>
+              <div className="chat-container align-left" key={`msg`}>
+                <div className="message">
+                  <Typing />
+                </div>
+                <div className="user-icon">
+                  <img src={botAvatar} alt="avatar-icon" />
+                </div>
+              </div>{" "}
+            </>
+          )}
         </div>
         <hr />
         <div className="bottom-container">
           <div className="form">
             <div className="left">
               {showEmojiKeyboard ? (
-                <span className="emoji-close-btn pointer" onClick={() => setShowEmojiKeyboard((prev) => !prev)}>X</span>
+                <span
+                  className="emoji-close-btn pointer"
+                  onClick={() => setShowEmojiKeyboard((prev) => !prev)}
+                >
+                  X
+                </span>
               ) : (
                 <EmojiIcon
                   onClick={() => setShowEmojiKeyboard((prev) => !prev)}

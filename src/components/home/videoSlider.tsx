@@ -37,7 +37,13 @@ const VideoSlider: React.FC<VideoSliderProps> = ({ videoUrls }) => {
           src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2f4ffb14-ce57-429c-9f2f-5dad2ff043e4.png"
           alt=""
         /> */}
-        <PrevIcon className="naviagte-icon" onClick={handlePrev} />
+        <PrevIcon
+          className="naviagte-icon"
+          onClick={handlePrev}
+          style={{
+            opacity: currentVideoIndex === 0 ? 0.1 : 1,
+          }}
+        />
 
         <div className="slider-container">
           {videoUrls
@@ -59,7 +65,14 @@ const VideoSlider: React.FC<VideoSliderProps> = ({ videoUrls }) => {
           src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/b25aca4d-dcbe-4255-9cc4-6bf5d2ff2675.png"
           alt=""
         /> */}
-        <NextIcon className="naviagte-icon" onClick={handleNext} />
+        <NextIcon
+          className="naviagte-icon"
+          onClick={handleNext}
+          style={{
+            opacity: currentVideoIndex + 4 === videoUrls.length ? 0.1 : 1,
+          }}
+          
+        />
       </div>
 
       <div className="below-section">

@@ -118,7 +118,7 @@ const QStepper: React.FC<QStepperProps> = (props) => {
       // If other is also selected, then let's add the userInput to the formData
       // (formData[2].options as string[]).push(userOtherInput);
 
-      // Specify the index of 'Other' in the array
+      // Specify the index of 'Other' in the array --> handling step-2
       const indexOfOther = (formData[2].options as string[]).indexOf("Other");
 
       // Check if 'Other' is found in the array
