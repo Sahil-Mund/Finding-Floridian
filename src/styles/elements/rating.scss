@@ -1,8 +1,9 @@
+@import '../modules/variables';
+
 .rating-container {
-    display: flex;
-    align-items: center;
-  }
-  
+  display: flex;
+  align-items: center;
+
   .dot {
     width: 20px;
     height: 20px;
@@ -10,14 +11,14 @@
     border-radius: 50%;
     cursor: pointer;
   }
-  
+
   .selected {
-    background-color: #6A704C; /* Change this color to your preferred highlight color */
+    background-color: $dark-green-color;
   }
 
   .line {
     height: 2px;
     width: 15px;
-    border-bottom: 2px solid #ccc; 
-   }
-  
+    // border-bottom: 2px solid #ccc;
+  }
+}

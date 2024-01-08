@@ -1,3 +1,5 @@
+@import './modules/variables';
+
 .chatbot-btn {
     position: fixed;
     bottom: 44px;
@@ -95,7 +97,7 @@
 
 .chat-modal {
     user-select: text;
-    background: #f5f1ee;
+    background: $nude-color;
     filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
     width: 66%;
     margin: auto;
@@ -110,7 +112,7 @@
 
     .modal-container {
         hr {
-            border: 0.5px solid #6a704c;
+            border: 0.5px solid $dark-green-color;
         }
         .date-container {
             display: flex;
@@ -118,9 +120,8 @@
             justify-content: center;
 
             p {
-                color: #6a704c;
+                color: $dark-green-color;
                 text-align: end;
-                font-family: Poppins;
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 300;
@@ -153,8 +154,7 @@
                     p {
                         width: 90%;
                         word-wrap: break-word;
-                        color: #6a704c;
-                        font-family: Poppins;
+                        color: $dark-green-color;
                         font-size: 15px;
                         font-style: normal;
                         font-weight: 300;
@@ -191,8 +191,8 @@
                     gap: 21px;
 
                     .emoji-close-btn {
-                        font-family: "Poppins";
-                        color: #6a704c;
+                   
+                        color: $dark-green-color;
                         font-size: large;
                         font-weight: 500;
                     }
@@ -201,9 +201,9 @@
                         bottom: 72px;
                     }
                     input {
-                        background: #f5f1ee;
-                        color: #6a704c;
-                        font-family: Poppins;
+                        background: #FFFAF3;
+                        color: $dark-green-color;
+                        
                         font-size: 17px;
                         font-style: italic;
                         font-weight: 300;
@@ -295,7 +295,7 @@
     }
 
     // .modal-overlay{
-    //     background: #f5f1ee;
+    //     background: #FFFAF3;
     //     filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
     //     width: 70%;
     //     margin: auto;

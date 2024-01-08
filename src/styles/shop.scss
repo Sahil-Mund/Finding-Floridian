@@ -1,6 +1,8 @@
+@import './modules/variables';
+
 section.shop {
     .banner-container {
-        background: #f9f4f0;
+        background: $nude-color;
         width: 100%;
 
         .banner {
@@ -8,7 +10,6 @@ section.shop {
             gap: 48px;
             padding-bottom: 4%;
             margin: auto;
-            background: #f9f4f0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -16,20 +17,18 @@ section.shop {
                 width: 40%;
 
                 p:nth-child(1) {
-                    color: #6a704c;
-                    font-family: Poppins;
-                    font-size: 54px;
+                  
+                    font-size: 9em;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: 500;
                     line-height: 113%;
                     text-transform: uppercase;
                     margin-bottom: 5px;
                 }
 
                 p:nth-child(2) {
-                    color: #6a704c;
-                    font-family: Poppins;
-                    font-size: 31px;
+                  
+                    font-size: 28px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 113%;
@@ -67,7 +66,8 @@ section.shop {
 
             .post {
                 width: 31%;
-                background: #f9f4f0;
+                background: $nude-color;
+
                 max-height: 400px;
                 min-height: 400px;
                 border-radius: 10px;
@@ -78,10 +78,8 @@ section.shop {
                         height: 281px;
                     }
                     p {
-                        color: #6a704c;
-                        font-family: Poppins;
+                      
                         font-size: 17px;
-                        font-style: normal;
                         font-weight: 400;
                         line-height: 113%;
                         text-align: center;

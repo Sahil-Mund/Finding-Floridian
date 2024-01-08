@@ -41,8 +41,8 @@ function App() {
 
           <Route path="/login" element={<LogIn />} />
           <Route path="/register" element={<SignUp />} />
-          <Route path="/rent" element={<RentalPage />} />
-          <Route path="/buy" element={<SalePage />} />
+          {/* <Route path="/rent" element={<RentalPage />} />
+          <Route path="/buy" element={<SalePage />} /> */}
           <Route path="/home-tour" element={<HomeTour />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/contact-us" element={<ContactPage />} />

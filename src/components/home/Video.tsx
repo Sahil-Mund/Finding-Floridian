@@ -32,7 +32,7 @@ const Video: React.FC<VideoProps> = ({ url }) => {
   }, []);
 
   const handleClick = () => {
-    navigate("/buy");
+    navigate("/recommendation?type=buy");
   };
 
   // const handleMouseOver = () => {

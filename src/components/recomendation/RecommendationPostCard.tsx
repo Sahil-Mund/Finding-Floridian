@@ -48,7 +48,7 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
           exceptional properties that offer a unique blend of features that
           match your ideal Florida lifestyle.
         </p>
-        <h3>Here are the top picks from your HOME GIRL.</h3>
+        <h3>Here are the top picks from your Home Girl.</h3>
 
         <div className="post-items">
           {data?.map((ele, index) => (
@@ -69,15 +69,17 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
 
                   <div className="item-amenities">
                     <div className="amenity amenity-1">
-                      <HomeSmIcon />
+                      <BedRoomSmIcon />
+
                       {ele.amenitie1}
                     </div>
                     <div className="amenity amenity-2">
-                      <BedRoomSmIcon />
+                      <BathSmIcon />
+
                       {ele.amenitie2}
                     </div>
                     <div className="amenity amenity-3">
-                      <BathSmIcon />
+                      <HomeSmIcon />
                       {ele.amenitie3}
                     </div>
                     <div className="amenity amenity-4">
@@ -100,7 +102,7 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
                         <span onClick={handleUnlock} className="pointer">
                           Unlock Premium Insights
                         </span>
-                        <LockIcon />
+                        <LockIcon className="lock-icon"/>
                       </>
                     )}
                   </div>
@@ -110,14 +112,14 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
 
                     <div className="item-amenities">
                       <div className="amenity amenity-1">
-                        <HomeSmIcon />
-                        2-3 Guests
-                      </div>
-                      <div className="amenity amenity-2">
                         <BedRoomSmIcon />1 Bedroom
                       </div>
-                      <div className="amenity amenity-3">
+                      <div className="amenity amenity-2">
                         <BathSmIcon />1 Private Bath
+                      </div>
+                      <div className="amenity amenity-3">
+                        <HomeSmIcon />
+                        XYZ sq.ft
                       </div>
                       <div className="amenity amenity-4">
                         <LocationSmIcon />

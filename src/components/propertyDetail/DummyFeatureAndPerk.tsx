@@ -29,7 +29,7 @@ const DummyFeatureAndPerk: React.FC<DummyFeatureAndPerkProps> = ({
             <span onClick={onUnLock} className="pointer">
               Unlock Premium Insights
             </span>
-            <LockIcon />
+            <LockIcon className="lock-icon" />
           </>
         )}
       </div>

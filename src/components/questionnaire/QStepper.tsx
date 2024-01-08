@@ -32,7 +32,7 @@ const QStepper: React.FC<QStepperProps> = (props) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [currentQna, setCurrentQna] = useState<Question>();
   const [maxStep, setMaxStep] = useState<number>(6);
-  const [containerHeight, setcontainerHeight] = useState<number>(64);
+  const [containerHeight, setcontainerHeight] = useState<number>();
   const [formData, setFormData] = useState<
     RadioFormData | CheckboxFormData | undefined
   >({});
@@ -71,8 +71,9 @@ const QStepper: React.FC<QStepperProps> = (props) => {
   //   console.log(formData);
   // };
 
+  const CHECKBOX_INPUT_TOGGLE = "Other";
   const handleCheckboxOptionSelect = (selectedOption: string) => {
-    if (selectedOption === "Other") {
+    if (selectedOption === CHECKBOX_INPUT_TOGGLE) {
       setIsOtherChecked(true);
     }
     setFormData((prevData: any) => {
@@ -114,12 +115,18 @@ const QStepper: React.FC<QStepperProps> = (props) => {
     e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
   ) => {
     e.preventDefault();
-    if (formData && userOtherInput && formData[2].options?.includes("Other")) {
+    if (
+      formData &&
+      userOtherInput &&
+      formData[2].options?.includes(CHECKBOX_INPUT_TOGGLE)
+    ) {
       // If other is also selected, then let's add the userInput to the formData
       // (formData[2].options as string[]).push(userOtherInput);
 
       // Specify the index of 'Other' in the array --> handling step-2
-      const indexOfOther = (formData[2].options as string[]).indexOf("Other");
+      const indexOfOther = (formData[2].options as string[]).indexOf(
+        CHECKBOX_INPUT_TOGGLE
+      );
 
       // Check if 'Other' is found in the array
       if (indexOfOther !== -1) {
@@ -133,7 +140,6 @@ const QStepper: React.FC<QStepperProps> = (props) => {
     }
     const data = { ...formData, 4: rating[4] };
 
-    
     const queryParams = new URLSearchParams(location.search);
     const type = queryParams.get("type");
 
@@ -154,6 +160,20 @@ const QStepper: React.FC<QStepperProps> = (props) => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
+    const step = queryParams.get("step");
+
+    if (step) {
+      setCurrentStep(+step);
+    }
+    const newSearch = location.search.replace(/&step=2/g, "");
+    navigate({
+      pathname: location.pathname,
+      search: newSearch,
+    });
+  }, [location.search, navigate]);
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
     const type = queryParams.get("type");
 
     if (type !== "buy" && type !== "rent") {
@@ -170,7 +190,7 @@ const QStepper: React.FC<QStepperProps> = (props) => {
       setCurrentQna(qnaData);
     }
 
-    setcontainerHeight(currentQna?.answerType === "rating" ? 80 : 64);
+    setcontainerHeight(currentQna?.answerType === "rating" ? 80 : 71);
   }, [currentStep, location.search, navigate, currentQna]);
 
   const renderPrevStep = () => {
@@ -221,7 +241,7 @@ const QStepper: React.FC<QStepperProps> = (props) => {
                     {currentQna?.answerType === "checkbox" ? (
                       <>
                         {currentQna?.answerType === "checkbox" &&
-                        ele === "Other" ? (
+                        ele === CHECKBOX_INPUT_TOGGLE ? (
                           <>
                             {isOtherChecked ? (
                               <input
@@ -266,7 +286,7 @@ const QStepper: React.FC<QStepperProps> = (props) => {
                         checked={formData![currentQna?.step]?.options === ele}
                       />
                     )}
-                    {ele !== "Other" && <span>{ele}</span>}
+                    {ele !== CHECKBOX_INPUT_TOGGLE && <span>{ele}</span>}
                   </div>
                 )}
               </>

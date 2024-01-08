@@ -1,4 +1,6 @@
-$boxShadow-primary: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
+@import "./modules/mixins";
+@import "./modules/variables";
+
 .btn-unlock-animation {
     @keyframes moveFromRight {
         0% {
@@ -23,6 +25,20 @@ section.post-section,
 section.recommendation-post-section {
     padding: 3%;
 
+    svg.lock-icon, svg.unlock-icon {
+        path:nth-child(1) {
+            fill: $dark-green-color;
+        }
+        path:nth-child(2) {
+            stroke: $dark-green-color;
+        }
+    }
+   
+    svg:not(.lock-icon):not(.unlock-icon) {
+        path {
+            fill: $dark-green-color;
+        }
+    }
     .container-box {
         background: #f5f1ee;
         filter: $boxShadow-primary;
@@ -33,8 +49,6 @@ section.recommendation-post-section {
         text-align: center;
 
         h2 {
-            color: #6a704c;
-            font-family: Poppins;
             font-size: 22px;
             font-style: normal;
             font-weight: 600;
@@ -44,25 +58,21 @@ section.recommendation-post-section {
 
         h1 {
             text-transform: uppercase;
-            color: #6a704c;
+
             text-align: center;
-            font-family: Poppins;
+
             font-size: 27px;
             font-style: normal;
             font-weight: 700;
             line-height: 119%;
         }
         p {
-            color: #6a704c;
-            font-family: Poppins;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
             line-height: 119%;
         }
         h3 {
-            color: #6a704c;
-            font-family: Poppins;
             font-size: 21px;
             font-style: normal;
             font-weight: 700;
@@ -77,8 +87,8 @@ section.recommendation-post-section {
             gap: 20px;
 
             .post-item {
-                border-radius: 10px;
-                border: 3px solid #6a704c;
+                // border-radius: 10px;
+                border: 3px solid $dark-green-color;
 
                 background: #f5f1ee;
                 padding: 1%;
@@ -100,12 +110,12 @@ section.recommendation-post-section {
                         border-radius: 10px;
                         bottom: 436px;
                         margin-left: 160px;
+                        text-decoration: none;
 
                         span {
-                            color: #6a704c;
                             text-align: center;
-                            font-family: Poppins;
-                            font-size: 12px;
+                            color: $matte-black;
+                            font-size: 11px;
                             font-style: normal;
                             font-weight: 700;
                             line-height: 113%; /* 10.17px */
@@ -118,20 +128,16 @@ section.recommendation-post-section {
                 .item-content {
                     padding-left: 2%;
                     .item-price {
-                        color: #6a704c;
-                        font-family: Poppins;
                         font-size: 41px;
                         font-style: normal;
                         font-weight: 700;
                         line-height: 49.5px;
                         text-transform: uppercase;
                         text-align: left;
-                        padding-bottom: 8%;
+                        padding-bottom: 12%;
                         margin: 1px;
                     }
                     .item-title {
-                        color: #6a704c;
-                        font-family: Poppins;
                         font-size: 15px;
                         font-style: normal;
                         font-weight: 700;
@@ -147,8 +153,6 @@ section.recommendation-post-section {
                         column-gap: 22px;
                         row-gap: 0px;
                         .amenity {
-                            color: #6a704c;
-                            font-family: Poppins;
                             font-size: 13px;
                             font-style: normal;
                             font-weight: 400;
@@ -186,9 +190,7 @@ section.recommendation-post-section {
                     bottom: 37.5%;
 
                     span {
-                        color: #6a704c;
-                        font-family: Poppins;
-                        font-size: 15px;
+                        font-size: 14px;
                         font-style: normal;
                         font-weight: 500;
                         line-height: 113%;
@@ -204,20 +206,14 @@ section.recommendation-post-section {
                 padding: 2%;
                 color: #eff8ff;
                 text-align: center;
-                font-family: Poppins;
-                font-size: 21px;
-                font-style: normal;
+                @include btnStyle($font-size: 21px, $width: 268px);
                 font-weight: 400;
                 line-height: 113%; /* 29.38px */
-                border-radius: 20px;
-                border: 1px solid #979C57;
-                background: #979C57;
                 margin-top: 4%;
             }
             p {
-                color: #6a704c;
                 text-align: center;
-                font-family: Poppins;
+
                 font-size: 15px;
                 font-style: italic;
                 font-weight: 400;
@@ -272,9 +268,7 @@ section.post-section {
             bottom: 37.5%;
 
             span {
-                color: #6a704c;
-                font-family: Poppins;
-                font-size: 15px;
+                font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 113%;
@@ -285,13 +279,13 @@ section.post-section {
 
 section.recommendation-post-section {
     .btn-unlock {
-        bottom: 34.5% !important;
+        bottom: 33.5% !important;
     }
 
     .bottom-section {
         button {
-           font-size: 18px !important;
-           cursor: pointer;
+            font-size: 18px !important;
+            cursor: pointer;
         }
     }
     .modal-container {
@@ -303,14 +297,13 @@ section.recommendation-post-section {
         margin: auto;
         position: absolute;
         left: 36%;
-        top: 144%;
+        top: 142%;
         filter: $boxShadow-primary;
         transition: all 0.7s ease;
 
         .details {
-            color: #6a704c;
             text-align: center;
-            font-family: Poppins;
+
             font-size: 15px;
             font-style: italic;
             font-weight: 400;
@@ -323,14 +316,9 @@ section.recommendation-post-section {
             a {
                 margin-right: 5%;
                 button {
-                    border-radius: 20px;
-                    border: 1px solid #979C57;
-                    background: #979C57;
+                    @include btnStyle($font-size: 17px, $width: 150px);
                     color: #eff8ff;
                     text-align: center;
-                    font-family: Poppins;
-                    font-size: 17px;
-                    font-style: normal;
                     font-weight: 500;
                     line-height: 113%;
                     padding: 4%;

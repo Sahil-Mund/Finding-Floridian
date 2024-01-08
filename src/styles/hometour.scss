@@ -1,8 +1,10 @@
+@import './modules/variables.scss';
+
 section.home-tour-section {
     padding: 3%;
 
     .container-box {
-        background: #f5f1ee;
+        background: $box-cntr-color;
         filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
         width: 62%;
         margin: auto;
@@ -11,8 +13,6 @@ section.home-tour-section {
         text-align: center;
 
         h3 {
-            color: #6a704c;
-            font-family: Poppins;
             font-size: 21px;
             font-style: normal;
             font-weight: 700;
@@ -28,8 +28,6 @@ section.home-tour-section {
             .left {
                 margin-left: 2%;
                 p {
-                    color: #6a704c;
-                    font-family: Montserrat;
                     font-size: 23px;
                     font-style: normal;
                     font-weight: 500;
@@ -56,8 +54,7 @@ section.home-tour-section {
                             border: none;
                             background: none;
                             outline: none;
-                            color: #6a704c;
-                            font-family: Poppins;
+
                             font-size: 15px;
                             font-style: normal;
                             font-weight: 400;
@@ -80,7 +77,6 @@ section.home-tour-section {
 
                                 &:checked,
                                 &:hover {
-                                    background-color: #6a704c;
                                     color: #f5f1ee;
                                 }
                             }

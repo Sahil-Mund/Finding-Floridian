@@ -19,7 +19,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
         heading="I'm Carter Long"
         subHeading="Your Home Girl."
         direction="forward"
-        para="About me blurb. Use of Al technology to ​simplify the process of finding the perfect ​home in the Sunshine State. Whether you're renting, buying, or exploring ​Florida's beautiful locations, our mission is to ​match your unique needs with the ideal ​properties, making your journey both ​effortless and enjoyable."
+        para="I am a multi-generational Florida native that is thrilled to help you find your place to call home in the Sunshine State. Whether you're renting, buying or exploring Florida, my mission is to match your unique needs with the perfect property, making your journey both effortless and enjoyable. I have selected the best partner with local expertise, quality service, and ultimately get you into your Florida home. We look forward to helping you."
       />
 
       <About
@@ -31,7 +31,6 @@ const HomePage: React.FC<HomePageProps> = (props) => {
       />
       {/* <InstaPost recentPosts={InstarecentPosts} />
        */}
-
     </>
   );
 };

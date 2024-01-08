@@ -1,4 +1,5 @@
-export const logoURL = "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c3dd71e7-7a51-4474-a5c0-f59ae0e3e84e.png"
+export const logoURL =
+  "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c3dd71e7-7a51-4474-a5c0-f59ae0e3e84e.png";
 export const profilePic =
   "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/717d639b-8d5c-479a-961f-052d91f8624e.png";
 
@@ -10,16 +11,16 @@ export const navigationURLs = [
   },
   {
     displayName: "Rent",
-    url: "/rent",
-    type: "",
+    url: "/questionnaire/qna?type=rent&step=2",
+    type: "test",
   },
   {
     displayName: "Buy",
-    url: "/buy",
-    type: "",
+    url: "/questionnaire/qna?type=buy&step=2",
+    type: "test",
   },
   {
-    displayName: "Home Tour",
+    displayName: "Home Tours",
     url: "/home-tour",
     type: "",
   },
@@ -80,28 +81,6 @@ export const homeAboutImages = [
   },
 ];
 
-// export const partners = [
-//   {
-//     image:
-//       "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/88d8c1d4-db34-4d21-8050-96019e5076dd.png",
-//   },
-//   {
-//     image:
-//       "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/40810f0c-760c-4bcb-b8e0-5c0951be8b35.png",
-//   },
-//   {
-//     image:
-//       "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/135b69d6-54a1-4b69-af3d-31f219cce0b8.jpeg",
-//   },
-//   {
-//     image:
-//       "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/deb356ef-e54b-4c8c-8643-2928853b1e3f.png",
-//   },
-//   {
-//     image:
-//       "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/285152e2-3185-42f9-bfc2-e4902140abf2.png",
-//   },
-// ];
 export const bgImg =
   "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/94ac7dbd-5ab2-4536-b9f9-b1a7aa892dfd.png";
 
@@ -159,9 +138,9 @@ export const rentalPosts = [
     price: "$4,600",
     title: "Magnolia Heights",
     url: "/property-detail",
-    amenitie1: "2-3 Guests",
-    amenitie2: "1 Bedroom",
-    amenitie3: "1 Private Bath",
+    amenitie1: "1 Bedroom",
+    amenitie2: "1 Private Bath",
+    amenitie3: "XYZ sq.ft",
     amenitie4: "Central Florida",
   },
   {
@@ -170,9 +149,9 @@ export const rentalPosts = [
     price: "$4,600",
     title: "Magnolia Heights",
     url: "/property-detail",
-    amenitie1: "2-3 Guests",
-    amenitie2: "1 Bedroom",
-    amenitie3: "1 Private Bath",
+    amenitie1: "1 Bedroom",
+    amenitie2: "1 Private Bath",
+    amenitie3: "XYZ sq.ft",
     amenitie4: "Central Florida",
   },
   {
@@ -181,9 +160,9 @@ export const rentalPosts = [
     price: "$4,600",
     title: "Magnolia Heights",
     url: "/property-detail",
-    amenitie1: "2-3 Guests",
-    amenitie2: "1 Bedroom",
-    amenitie3: "1 Private Bath",
+    amenitie1: "1 Bedroom",
+    amenitie2: "1 Private Bath",
+    amenitie3: "XYZ sq.ft",
     amenitie4: "Central Florida",
   },
 ];
@@ -192,12 +171,12 @@ export const salesPosts = [
   {
     image:
       "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/b80bb4a0-7692-46e2-b646-d9b903dac844.png",
-    price: "$4,600",
+    price: "$4,600,00",
     title: "Magnolia Heights",
     url: "/property-detail",
-    amenitie1: "2-3 Guests",
-    amenitie2: "1 Bedroom",
-    amenitie3: "1 Private Bath",
+    amenitie1: "1 Bedroom",
+    amenitie2: "1 Private Bath",
+    amenitie3: "XYZ sq.ft",
     amenitie4: "Central Florida",
   },
   {
@@ -206,9 +185,9 @@ export const salesPosts = [
     price: "$4,600",
     title: "Magnolia Heights",
     url: "/property-detail",
-    amenitie1: "2-3 Guests",
-    amenitie2: "1 Bedroom",
-    amenitie3: "1 Private Bath",
+    amenitie1: "1 Bedroom",
+    amenitie2: "1 Private Bath",
+    amenitie3: "XYZ sq.ft",
     amenitie4: "Central Florida",
   },
   {
@@ -217,9 +196,9 @@ export const salesPosts = [
     price: "$4,600",
     title: "Magnolia Heights",
     url: "/property-detail",
-    amenitie1: "2-3 Guests",
-    amenitie2: "1 Bedroom",
-    amenitie3: "1 Private Bath",
+    amenitie1: "1 Bedroom",
+    amenitie2: "1 Private Bath",
+    amenitie3: "XYZ sq.ft",
     amenitie4: "Central Florida",
   },
 ];
@@ -490,7 +469,6 @@ export const questionnaire = [
           "Townhome",
           "Multi-Family",
           "Ranch",
-          "Other",
         ],
       },
       {
@@ -518,15 +496,15 @@ export const questionnaire = [
         question: "What amenities are important to you?",
         answerType: "checkbox",
         options: [
-          "Pull",
-          "Luxury",
-          "Concierge",
+          "New Construction",
+          "New Renovated",
+          "Pool",
           "Yard",
-          "Pet Friendly",
-          "Waterfront",
-          "Gym",
-          "Parking",
+          "Luxury",
           "No Homeowners Association",
+          "Waterfront",
+          "Garage",
+          "Central AC",
         ],
       },
       {
@@ -562,7 +540,7 @@ export const questionnaire = [
         step: "2",
         question: "What type of Rentals are you looking for?",
         answerType: "checkbox",
-        options: ["Apartment", "Townhome", "House", "Other"],
+        options: ["Apartment", "Townhome", "House"],
       },
       {
         step: "3",
@@ -589,15 +567,17 @@ export const questionnaire = [
         question: "What amenities are important to you?",
         answerType: "checkbox",
         options: [
-          "Pull",
-          "Luxury",
-          "Concierge",
-          "Yard",
-          "Pet Friendly",
-          "Waterfront",
+          "New Construction",
+          "New Renovated",
+          "Pool",
           "Gym",
+          "Yard",
+          "Luxury",
+          "Pet Friendly",
           "Parking",
-          "No Homeowners Association",
+          "Concierge",
+          "Waterfront",
+          "In-Unit Laundry",
         ],
       },
       {

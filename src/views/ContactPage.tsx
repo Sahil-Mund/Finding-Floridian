@@ -98,7 +98,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
         </div>
         <div className="form-container">
           <h5>Carter Long</h5>
-          <p>Your Home girl | finding Floridians</p>
+          <p>Your Home girl</p>
           <div className="social-container">
             <MailIcon />
 

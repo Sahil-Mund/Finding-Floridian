@@ -33,8 +33,7 @@ const Content: React.FC<ContentProps> = ({
         <img src={image} alt="content-section" />
       </div>
       <div className="text-container">
-        <div>HI</div>
-        <div>{heading}</div>
+        <div>HI {heading}</div>
         <div>{subHeading}</div>
         <p> {para}</p>
         <button className="btn-primary" onClick={handleContactMe}> Contact Me! </button>

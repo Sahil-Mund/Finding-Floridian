@@ -122,96 +122,102 @@ const Footer: React.FC<FooterProps> = (props) => {
   // }, [location]);
 
   return (
-    <section className="footer-section">
-      <div className="contact">
-        <div className="info">
-          <SocialIcon />
-          <div className="details">
-            <div className="navs">
-              {navlinksToShow?.map((nav, index) => (
-                <Link to={nav.url} key={index}>
-                  <span>{nav.displayName}</span>
-                </Link>
-              ))}
-            </div>
-            <div className="external-links navs">
-              {extraInfos?.map((ele, index) => (
-                <Link to={ele.url} key={index}>
-                  <span>{ele.displayName}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="connect-form">
-          <h1>Connect with your Home Girl!</h1>
-          <p>
-            Join the Finding Floridians community for all ​adventures with your
-            Home Girl.
-          </p>
-
-          <form onSubmit={handleSubmit}>
-            <div>
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First Name*"
-                value={formData.firstName}
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Last Name*"
-                value={formData.lastName}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <input
-                type="tel"
-                name="phoneNumber"
-                placeholder="Phone Number*"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email*"
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </div>
-            <button
-              className="btn-primary"
-              type="submit"
-              // disabled={btnDisabled}
-              // style={{ opacity: btnDisabled ? 0.5 : 1 }}
-            >
-              Contact Me!
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <hr />
-      <div className={`partners-section`}>
-        <div className="container">
-          <h3 style={{ textTransform: "uppercase" }}>Partners</h3>
-          <div className="image-items">
-            {partners?.map((PartnerIcons, index) => (
-              <div className="item-container" key={index}>
-                {" "}
-                <div className="item">
-                  <PartnerIcons />
-                </div>
+    <>
+      <section className="footer-section">
+        <div className="contact">
+          <div className="info">
+            <SocialIcon />
+            <div className="details">
+              <div className="navs">
+                {navlinksToShow?.map((nav, index) => (
+                  <Link to={nav.url} key={index}>
+                    <span>{nav.displayName}</span>
+                  </Link>
+                ))}
               </div>
-            ))}
+              <div className="external-links navs">
+                {extraInfos?.map((ele, index) => (
+                  <Link to={ele.url} key={index}>
+                    <span>{ele.displayName}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="connect-form">
+            <h1>Connect with your Home Girl!</h1>
+            <p>
+              Join the Finding Floridians community for all ​adventures with
+              your Home Girl.
+            </p>
+
+            <form onSubmit={handleSubmit}>
+              <div>
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name*"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name*"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder="Phone Number*"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email*"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <button
+                className="btn-primary"
+                type="submit"
+                // disabled={btnDisabled}
+                // style={{ opacity: btnDisabled ? 0.5 : 1 }}
+              >
+                Contact Me!
+              </button>
+            </form>
+            <p style={{ fontSize: "15px" }}>*required fields</p>
           </div>
         </div>
+
+        <hr />
+        <div className={`partners-section`}>
+          <div className="container">
+            <h3>Partners</h3>
+            <div className="image-items">
+              {partners?.map((PartnerIcons, index) => (
+                <div className="item-container" key={index}>
+                  {" "}
+                  <div className="item">
+                    <PartnerIcons />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="footer-banner">
+        <p> copyright @Finding Floridians</p>
       </div>
-    </section>
+    </>
   );
 };
 

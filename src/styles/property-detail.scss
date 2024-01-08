@@ -1,3 +1,6 @@
+@import "./modules/mixins";
+@import "./modules/variables";
+
 .btn-unlock-animation {
     @keyframes moveFromRight {
         0% {
@@ -55,8 +58,20 @@
             line-height: 113%;
         }
     }
-    svg {
-        cursor: pointer;
+    svg.lock-icon,
+    svg.unlock-icon {
+        path:nth-child(1) {
+            fill: $dark-green-color;
+        }
+        path:nth-child(2) {
+            stroke: $dark-green-color;
+        }
+    }
+
+    svg:not(.lock-icon):not(.unlock-icon) {
+        path {
+            fill: $dark-green-color;
+        }
     }
     .banner {
         display: flex;
@@ -220,17 +235,9 @@
                 padding: 12px;
                 max-width: 400px;
                 width: 84%;
-
-                border-radius: 20px;
-                border: 1px solid #979C57;
-                background: #979C57;
-                color: #eff8ff;
                 text-align: center;
-                font-family: Poppins;
                 font-size: 21px;
-                font-style: normal;
                 font-weight: 500;
-                line-height: 113%; /* 27.12px */
             }
         }
     }
