@@ -1,3 +1,5 @@
+@import './modules/variables';
+
 .base-checkbox {
     appearance: none;
     -webkit-appearance: none;
@@ -32,11 +34,24 @@
 }
 
 section.user-registration,
+section.user-login {
+    display: block;
+    position: absolute;
+    top: 51%;
+    left: 2%;
+
+    z-index: 1200;
+    width: 90%;
+    margin: auto;
+}
+
+section.user-registration,
 section.user-login,
 section.thankYou-section {
     padding: 3%;
     .container-box {
-        background: #f5f1ee;
+        font-family: $primary-font-family;
+        background: $nude-color;
         filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
         width: 62%;
         margin: auto;
@@ -46,36 +61,41 @@ section.thankYou-section {
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.3s ease-in-out;
 
+        .close-btn{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            svg{
+                cursor: pointer;
+            }
+        }
+
         .content {
             h1 {
-                color: #6a704c;
+                color: $dark-green-color;
                 text-align: center;
-                font-family: Poppins;
+                
                 font-size: 44px;
-                font-style: normal;
                 font-weight: 700;
                 line-height: 26%;
                 text-transform: uppercase;
             }
             h5 {
-                color: #6a704c;
+                color: $dark-green-color;
                 text-align: center;
-                font-family: Poppins;
                 font-size: 19px;
-                font-style: normal;
                 font-weight: 300;
                 line-height: 0;
                 text-transform: uppercase;
             }
             p {
-                color: #6a704c;
+                color: $dark-green-color;;
                 text-align: center;
-                font-family: Poppins;
                 font-size: 17px;
-                font-style: normal;
                 font-weight: 300;
                 line-height: 24px;
-                width: 63%;
+                width: 67%;
                 margin: auto auto 33px auto;
             }
         }
@@ -86,15 +106,15 @@ section.thankYou-section {
                 flex-direction: column;
                 gap: 20px;
 
-                input[type="text"], input[type="email"], input[type="password"] {
-                    border-radius: 10px;
-                    border: 1px solid #6a704c;
+                input[type="text"],
+                input[type="email"],
+                input[type="password"] {
+                   
+                    border: 1px solid $matte-black;
                     background: #fff;
-                    color: #6a704c;
-                    font-family: Montserrat;
+                    
                     font-size: 13px;
-                    font-style: normal;
-                    font-weight: 300;
+                        font-weight: 300;
                     /* line-height: 41px; */
                     padding: 2%;
                     outline: none;
@@ -114,16 +134,16 @@ section.thankYou-section {
                         text-align: left;
 
                         p:nth-child(1) {
-                            color: #6a704c;
-                            font-family: Poppins;
+                            color: $matte-black;
+                           
                             font-size: 16px;
                             font-style: italic;
                             font-weight: 700;
                             line-height: 1px;
                         }
                         p:nth-child(2) {
-                            color: #6a704c;
-                            font-family: Poppins;
+                            color: $matte-black;
+                           
                             font-size: 14px;
                             font-style: italic;
                             font-weight: 300;
@@ -141,27 +161,30 @@ section.thankYou-section {
                     button {
                         width: 30%;
                         margin: auto;
-                        background-color: #6a704c;
+                        background-color: $dark-green-color;
                     }
 
                     span {
-                        color: #6a704c;
+                        color: $matte-black;
                         text-align: center;
-                        font-family: Montserrat;
+                       
                         font-size: 15px;
                         font-style: italic;
                         font-weight: 400;
-                        line-height: normal;
-
+        
                         a {
-                            color: #6a704c;
-                            font-family: Montserrat;
+                            color: $dark-green-color;
+                           
                             font-size: 15px;
                             font-style: italic;
                             font-weight: 700;
-                            line-height: normal;
-                            text-decoration-line: underline;
+                                        text-decoration-line: underline;
                         }
+                    }
+
+                    .sign-up-btn{
+                        text-decoration-line: underline;
+                        color: $dark-green-color;
                     }
                 }
 
@@ -170,13 +193,12 @@ section.thankYou-section {
                     text-align: right;
 
                     a {
-                        color: #6a704c;
-                        font-family: Montserrat;
+                        color: $dark-green-color;
+                        font-family: $primary-font-family;
                         font-size: 15px;
                         font-style: italic;
                         font-weight: 700;
-                        line-height: normal;
-                        text-decoration-line: underline;
+                                text-decoration-line: underline;
                     }
                 }
             }
@@ -186,7 +208,7 @@ section.thankYou-section {
             h5 {
                 color: #6a704c;
                 text-align: center;
-                font-family: Poppins;
+               
                 font-size: 35px;
                 font-style: italic;
                 font-weight: 250;
@@ -196,11 +218,8 @@ section.thankYou-section {
             p {
                 color: #6a704c;
                 text-align: center;
-                font-family: Campton;
                 font-size: 18px;
-                font-style: normal;
                 font-weight: 700;
-                line-height: normal;
                 text-transform: uppercase;
             }
         }

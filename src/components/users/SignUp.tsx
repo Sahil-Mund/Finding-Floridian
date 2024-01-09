@@ -1,37 +1,39 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ThankYou } from "../components";
-import "../styles/signin-register.scss";
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../../hooks/useForm";
+import { CloseIcon } from "../../assets/svg";
+import { useUserModal } from "../../hooks/useUserModal";
 
 // interface SignUpProps {
 //   // Add your component's props here
 // }
 
 const SignUp: React.FC = () => {
-  const { formData, handleChange, resetForm } =
-    useForm({
-      name: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
+  const { formData, handleChange, resetForm } = useForm({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const {  onClose, changeComponentType } = useUserModal();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO : Add a validation to throw error
-    if(formData.password !== formData.confirmPassword) return;
+    if (formData.password !== formData.confirmPassword) return;
 
     //TODO: Add your form submission logic here
     console.log("Form submitted:", formData);
     resetForm();
-   
   };
-
 
   return (
     <section className="user-registration">
       <div className="container-box">
+        <div className="close-btn">
+          <CloseIcon onClick={onClose} />
+        </div>
         <div className="content">
           <h1>Create your account</h1>
           <h5>Please log in with your customer account to continue.</h5>
@@ -82,7 +84,7 @@ const SignUp: React.FC = () => {
                 Signup
               </button>
               <span>
-                Existing User? <Link to={"/login"}>LogIn</Link>
+                Existing User? <span onClick={() => changeComponentType('login')} className="pointer sign-up-btn">LogIn</span>
               </span>
             </div>
           </form>

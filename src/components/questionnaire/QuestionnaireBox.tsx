@@ -7,22 +7,30 @@ interface QuestionnaireBoxProps {
 
 const QuestionnaireBox: React.FC<QuestionnaireBoxProps> = (props) => {
   const navigate = useNavigate();
-  const handleClick = (type : string) => {
-    navigate(`/questionnaire/qna?type=${type}`)
+  const handleClick = (type: string) => {
+    navigate(`/questionnaire/qna?type=${type}`);
     // navigate(`/${type}-questionnaire`)
   };
   return (
     <div className="box-container">
       <h2>
-        <span className="light"> Tell me about your preferences,</span>{" "}
-        <span className="semibold">& I'll help you find the Perfect Home</span>
+        <span style={{ fontFamily: "Montserrat-Regular" }} className="light">
+          {" "}
+          Tell me about your preferences,
+        </span>{" "}
+        <span style={{ fontFamily: "Montserrat-Regular" }} className="semibold">
+          & I'll help you find the Perfect Home
+        </span>
       </h2>
 
-      <button className="btn-primary" onClick={() => handleClick('buy')}>
+      <button className="btn-primary" onClick={() => handleClick("buy")}>
         {" "}
         I want to buy a home{" "}
       </button>
-      <button className="btn-primary" onClick={() => handleClick('rent')}> I want to rent a home </button>
+      <button className="btn-primary" onClick={() => handleClick("rent")}>
+        {" "}
+        I want to rent a home{" "}
+      </button>
     </div>
   );
 };

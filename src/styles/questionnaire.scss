@@ -27,7 +27,7 @@ section.questionnaire-hero-section {
             border-radius: 12px;
 
             // background: rgba(255, 255, 255, 0.8);
-            background: $box-cntr-color;
+            background: $nude-color;
             backdrop-filter: blur(50px);
             width: 38em;
             height: 373px;
@@ -82,7 +82,7 @@ section.qna-stepper {
         height: 64vh;
         margin: 4% auto 4% auto;
         padding: 1% 6% 9% 6%;
-        background: #f5f1ee;
+        background: $nude-color;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.3s ease-in-out;
         filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
@@ -223,7 +223,6 @@ section.qna-stepper {
             }
 
             .btn-next {
-                border-radius: 10px;
                 background: #fff;
                 border: 1px solid #fff;
                 align-items: center;

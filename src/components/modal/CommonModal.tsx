@@ -1,12 +1,12 @@
 import React, { CSSProperties, ReactNode } from "react";
 
-interface ModalProviderProps {
+interface CommonModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
 }
 
-const ModalProvider: React.FC<ModalProviderProps> = ({
+const CommonModal: React.FC<CommonModalProps> = ({
   isOpen,
   onClose,
   children,
@@ -36,4 +36,4 @@ const ModalProvider: React.FC<ModalProviderProps> = ({
   );
 };
 
-export default ModalProvider;
+export default CommonModal;

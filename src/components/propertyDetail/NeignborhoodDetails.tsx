@@ -17,6 +17,7 @@ const NeignborhoodDetails: React.FC<NeignborhoodDetailsProps> = ({ data }) => {
     "Healthcare Facilities",
     "Scenic Views",
   ];
+
   return (
     <div className="neighborhood-container">
       <div className="grade">

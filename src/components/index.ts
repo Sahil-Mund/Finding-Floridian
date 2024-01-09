@@ -10,7 +10,9 @@ export { default as About } from "./home/About";
 export { default as PostCard } from "./PostCard";
 export { default as VideoGallery } from "./VideoGallery";
 export { default as Dropdown } from "./Dropdown";
-export { default as ModalProvider } from "./ModalProvider";
+
+export { default as ChatModal } from "./modal/CommonModal";
+export { default as UserModal } from "./modal/UserModal";
 
 export { default as QuestionnaireLandingPageWithHomeBanner } from "./questionnaire/QuestionnaireLandingPageWithHomeBanner";
 export { default as QStepper } from "./questionnaire/QStepper";
@@ -23,3 +25,6 @@ export { default as ApartmentInfo } from "./propertyDetail/ApartmentInfo";
 export { default as FeatureAndPerks } from "./propertyDetail/ListItems";
 export { default as Gallery } from "./propertyDetail/Gallery";
 export { default as NeignborhoodDetails } from "./propertyDetail/NeignborhoodDetails";
+
+export { default as LogIn } from "./users/LogIn";
+export { default as SignUp } from "./users/SignUp";

@@ -12,12 +12,12 @@ export const navigationURLs = [
   {
     displayName: "Rent",
     url: "/questionnaire/qna?type=rent&step=2",
-    type: "test",
+    type: "same_page",
   },
   {
     displayName: "Buy",
     url: "/questionnaire/qna?type=buy&step=2",
-    type: "test",
+    type: "same_page",
   },
   {
     displayName: "Home Tours",

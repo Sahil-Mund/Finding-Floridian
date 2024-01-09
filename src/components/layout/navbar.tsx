@@ -10,12 +10,10 @@ const Navbar = () => {
   const { pathname, search } = useLocation();
 
   useEffect(() => {
-    const paths = pathname.split("/");
-    const type = search.split("=");
-
-    if (type && paths.includes("qna")) {
-      setQnaRouteType(type[1]);
-    }else{
+    if (pathname.includes("qna")) {
+      const type = search.split("=");
+      setQnaRouteType(type[1] || "");
+    } else {
       setQnaRouteType("");
     }
   }, [pathname, search]);
@@ -29,7 +27,7 @@ const Navbar = () => {
         <ul>
           {navigationURLs.map((ele, index) => (
             <>
-              {ele.type === "test" ? (
+              {ele.type === "same_page" ? (
                 <>
                   <Link
                     to={ele.url}

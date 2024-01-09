@@ -40,7 +40,7 @@ section.recommendation-post-section {
         }
     }
     .container-box {
-        background: #f5f1ee;
+        background: $nude-color;
         filter: $boxShadow-primary;
         width: 72%;
         margin: auto;
@@ -107,7 +107,7 @@ section.recommendation-post-section {
                         position: absolute;
                         gap: 20px;
                         width: 12%;
-                        border-radius: 10px;
+                        // border-radius: 10px;
                         bottom: 436px;
                         margin-left: 160px;
                         text-decoration: none;

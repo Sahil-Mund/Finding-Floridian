@@ -22,17 +22,17 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
       </div>
       <div className="banner-details">
         <span className="heading">
-          {data.heading} <BlueTick />{" "}
+          {data.heading} <BlueTick className="no-external-fill"/>{" "}
         </span>
         <span className="sub-heading">{data.subheading}</span>
         <i>{data.desc}</i>
         <div className="ratings">
           <span>
-            <YellowStar /> <b>{data.rating}</b>{" "}
+            <YellowStar className="no-external-fill" /> <b>{data.rating}</b>{" "}
             <span className="reviews">({data.review} reviews )</span>
           </span>
           <span>
-            <LocationIcon style={{ width: "14px", height: "14px" }} />{" "}
+            <LocationIcon className="no-external-fill" style={{ width: "14px", height: "14px" }} />{" "}
             {data.location}
           </span>
         </div>

@@ -59,7 +59,7 @@ section.contact-section {
                     line-height: 113%;
                     text-transform: uppercase;
                     padding: 2.5% 4%;
-                    border: 1px solid #6a704c;
+                    border: 1px solid $dark-green-color;
                     background: #fff;
                 }
             }
@@ -72,7 +72,7 @@ section.contact-section {
 
                     input {
                         width: 48%;
-                        border: 1px solid #6a704c;
+                        border: 1px solid $dark-green-color;
                         background: #fff;
                         padding: 2%;
                         outline: none;
@@ -90,7 +90,7 @@ section.contact-section {
                     justify-content: space-between;
                     align-items: center;
 
-                    input[type="checkbox"] {
+                    input[type="radio"] {
                         appearance: none;
                         -webkit-appearance: none;
                         -moz-appearance: none;
@@ -103,7 +103,7 @@ section.contact-section {
                         padding-right: 10px;
                         cursor: pointer;
                     }
-                    input[type="checkbox"]::before {
+                    input[type="radio"]::before {
                         content: "\2713";
                         position: relative;
                         top: 5px;
@@ -114,7 +114,7 @@ section.contact-section {
                         font-weight: bold;
                         opacity: 0;
                     }
-                    input[type="checkbox"]:checked::before {
+                    input[type="radio"]:checked::before {
                         opacity: 1;
                     }
 
@@ -145,6 +145,7 @@ section.contact-section {
                         margin: 3% 0;
                         outline: none;
                         padding: 2%;
+                        font-family: $primary-font-family;
                     }
                     textarea::placeholder {
                         font-size: 13px;

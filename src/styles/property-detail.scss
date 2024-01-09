@@ -38,11 +38,11 @@
         gap: 17px;
         margin-left: 47px;
         border-radius: 0px 0px 12px 12px;
-        border-bottom: 1px solid #6a704c;
+        border-bottom: 1px solid $dark-green-color;
         background: rgba(232, 222, 213, 0.3);
         backdrop-filter: blur(50px);
-        border-left: 1px solid #6a704c;
-        border-right: 1px solid #6a704c;
+        border-left: 1px solid $dark-green-color;
+        border-right: 1px solid $dark-green-color;
         z-index: 11;
         position: absolute;
         width: 235px;
@@ -50,9 +50,9 @@
         // margin-top: 221px;
 
         span {
-            color: #6a704c;
-            font-family: Poppins;
-            font-size: 15px;
+            color: $dark-green-color;
+
+            font-size: 14px;
             font-style: normal;
             font-weight: 500;
             line-height: 113%;
@@ -68,7 +68,7 @@
         }
     }
 
-    svg:not(.lock-icon):not(.unlock-icon) {
+    svg:not(.lock-icon):not(.unlock-icon):not(.no-external-fill) {
         path {
             fill: $dark-green-color;
         }
@@ -92,12 +92,12 @@
                 bottom: 12px;
                 right: 17px;
                 gap: 11px;
-                border-radius: 12px;
-                background: #f5f1ee;
+                // border-radius: 12px;
+                background: $nude-color;
                 padding: 6px;
                 span {
-                    color: #6a704c;
-                    font-family: Poppins;
+                    color: $dark-green-color;
+
                     font-size: 12px;
                     font-style: normal;
                     font-weight: 500;
@@ -116,8 +116,8 @@
                 display: flex;
                 align-items: center;
                 gap: 33px;
-                color: #585858;
-                font-family: Poppins;
+                color: $matte-black;
+
                 font-size: 58px;
                 font-style: normal;
                 font-weight: 700;
@@ -126,8 +126,8 @@
             }
 
             .sub-heading {
-                color: #6a704c;
-                font-family: Poppins;
+                color: $dark-green-color;
+
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 700;
@@ -136,8 +136,8 @@
             }
 
             i {
-                color: #6a704c;
-                font-family: Poppins;
+                color: $dark-green-color;
+
                 font-size: 20px;
                 font-style: italic;
                 font-weight: 300;
@@ -161,8 +161,8 @@
                     }
 
                     b {
-                        color: #6a704c;
-                        font-family: Poppins;
+                        color: $dark-green-color;
+
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 700;
@@ -170,8 +170,8 @@
                     }
 
                     .reviews {
-                        color: #6a704c;
-                        font-family: Poppins;
+                        color: $dark-green-color;
+
                         font-size: 11px;
                         font-style: normal;
                         font-weight: 300;
@@ -180,8 +180,8 @@
                 }
 
                 span:nth-child(2) {
-                    color: #6a704c;
-                    font-family: Poppins;
+                    color: $dark-green-color;
+
                     font-size: 15px;
                     font-style: normal;
                     font-weight: 300;
@@ -197,8 +197,8 @@
                     line-height: 20px;
                     // text-align: justify;
                     word-wrap: break-word;
-                    color: #6a704c;
-                    font-family: Poppins;
+                    color: $dark-green-color;
+
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 300;
@@ -211,8 +211,8 @@
                 margin-top: 8px;
 
                 span:nth-child(1) {
-                    color: #6a704c;
-                    font-family: Poppins;
+                    color: $dark-green-color;
+
                     font-size: 49px;
                     font-style: normal;
                     font-weight: 700;
@@ -221,8 +221,8 @@
                 }
 
                 span:nth-child(2) {
-                    color: #6a704c;
-                    font-family: Poppins;
+                    color: $dark-green-color;
+
                     font-size: 15px;
                     font-style: normal;
                     font-weight: 300;
@@ -243,15 +243,14 @@
     }
 
     .neighborhood-container {
-        border: 2px solid #6a704c;
+        border: 2px solid $dark-green-color;
         width: 95%;
         // height: 320px;
-        background: #f5f1ee;
+        background: $nude-color;
 
-        border-radius: 6px;
         padding: 31px;
         margin: 50px 0;
-        border-radius: 12px;
+        // border-radius: 12px;
         display: flex;
 
         .grade {
@@ -264,8 +263,8 @@
 
                     .title {
                         display: block;
-                        color: #6a704c;
-                        font-family: Poppins;
+                        color: $dark-green-color;
+
                         font-size: 23px;
                         font-style: normal;
                         font-weight: 500;
@@ -274,9 +273,9 @@
                     }
                 }
                 p {
-                    color: #6a704c;
-                    font-family: Poppins;
-                    font-size: 18px;
+                    color: $dark-green-color;
+
+                    font-size: 17px;
                     font-style: normal;
                     font-weight: 300;
                     line-height: 28.5px;
@@ -293,8 +292,8 @@
                     gap: 7px;
                     width: 44%;
                     .grades-desc {
-                        color: #6a704c;
-                        font-family: Poppins;
+                        color: $dark-green-color;
+
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 500;
@@ -309,22 +308,22 @@
                 }
             }
             .grade-btn {
-                border-radius: 12px;
-                background: #6a704c;
+                // border-radius: 12px;
+                background: $dark-green-color;
                 color: #f5f1ee;
-                font-family: Poppins;
-                font-style: normal;
+
+                font-style: normal; 
                 font-weight: 700;
                 line-height: 49.5px; /* 107.609% */
                 text-transform: uppercase;
-                font-size: 38px;
-                padding: 1%;
+                font-size: 34px;
+                padding: 1% 2%;
             }
             .grade-btn-sm {
-                border-radius: 8px;
-                background: rgba(106, 112, 76, 0.8);
+                // border-radius: 8px;
+                background: $dark-green-color;
                 color: #f5f1ee;
-                font-family: Poppins;
+
                 font-style: normal;
                 font-weight: 700;
                 line-height: 49.5px; /* 107.609% */
@@ -358,8 +357,8 @@
         .apartment-summary {
             flex: 50;
             .title {
-                color: #6a704c;
-                font-family: Poppins;
+                color: $dark-green-color;
+
                 font-size: 37px;
                 font-style: normal;
                 font-weight: 700;
@@ -380,8 +379,8 @@
 
                     span {
                         margin-left: 8px;
-                        color: #6a704c;
-                        font-family: Poppins;
+                        color: $dark-green-color;
+
                         font-size: 15px;
                         font-style: normal;
                         font-weight: 300;
@@ -396,8 +395,8 @@
                     line-height: 24px;
                     padding: 10px 0;
 
-                    color: #6a704c;
-                    font-family: Poppins;
+                    color: $dark-green-color;
+
                     font-size: 20px;
                     font-style: normal;
                     font-weight: 300;
@@ -423,7 +422,7 @@
                 display: flex;
                 align-items: center;
                 gap: 14px;
-                border-radius: 12px;
+                // border-radius: 12px;
                 background: #f5f1ee;
                 padding: 2%;
                 width: 45%;
@@ -432,8 +431,8 @@
                 bottom: 23px;
 
                 span {
-                    color: #6a704c;
-                    font-family: Poppins;
+                    color: $dark-green-color;
+
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
@@ -448,8 +447,8 @@
         margin: 10px 0;
         .details {
             h3 {
-                color: #6a704c;
-                font-family: Poppins;
+                color: $dark-green-color;
+
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 700;
@@ -468,8 +467,8 @@
 
                 div {
                     h4 {
-                        color: #6a704c;
-                        font-family: Poppins;
+                        color: $dark-green-color;
+
                         font-size: 19px;
                         font-style: normal;
                         font-weight: 700;
@@ -477,8 +476,8 @@
                         text-transform: uppercase;
                     }
                     p {
-                        color: #6a704c;
-                        font-family: Poppins;
+                        color: $dark-green-color;
+
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 300;
@@ -512,9 +511,9 @@
         width: 70%;
         margin: auto;
         p {
-            color: #6a704c;
+            color: $dark-green-color;
             text-align: center;
-            font-family: Poppins;
+
             font-size: 18px;
             font-style: normal;
             font-weight: 300;
@@ -536,9 +535,9 @@
 
     .gallery-container {
         .gallery-title {
-            color: #6a704c;
+            color: $dark-green-color;
             text-align: center;
-            font-family: Poppins;
+
             font-size: 46px;
             font-style: normal;
             font-weight: 700;
@@ -548,13 +547,12 @@
 
         .gallery-grid {
             display: grid;
-            // grid-template-columns: repeat(3, 1fr);
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 16px;
 
             .gallery-item {
                 overflow: hidden;
-                border-radius: 10px;
+                // border-radius: 10px;
                 max-height: 250px;
             }
 

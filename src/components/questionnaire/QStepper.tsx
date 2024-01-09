@@ -5,11 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { ColorRing } from "react-loader-spinner";
 import { NextArrowIcon, PreviousArrowIcon } from "../../assets/svg";
-import Rating from "./Rating";
-
-interface QStepperProps {
-  // Add your component's props here
-}
+import QNAForm from "./QnaForm";
 
 interface Question {
   step: string;
@@ -28,7 +24,9 @@ interface CheckboxFormData {
   };
 }
 
-const QStepper: React.FC<QStepperProps> = (props) => {
+const QStepper: React.FC = () => {
+  const CHECKBOX_INPUT_TOGGLE = "Other";
+
   const [currentStep, setCurrentStep] = useState(1);
   const [currentQna, setCurrentQna] = useState<Question>();
   const [maxStep, setMaxStep] = useState<number>(6);
@@ -42,6 +40,10 @@ const QStepper: React.FC<QStepperProps> = (props) => {
   const [isOtherChecked, setIsOtherChecked] = useState<boolean>(false);
   const [userOtherInput, setUserOtherInput] = useState<string>("");
 
+  // const [JSONlocalData, setJSONLocalData] = useState<
+  //   RadioFormData | CheckboxFormData | undefined
+  // >({});
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -53,25 +55,8 @@ const QStepper: React.FC<QStepperProps> = (props) => {
         options: selectedOption,
       },
     }));
-    // console.log(formData);
   };
-  // const handleCheckboxOptionSelect = (selectedOption: string) => {
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [currentQna?.step || ""]: {
-  //       question: currentQna?.question,
-  //       options: [
-  //         ...(prevData && prevData[currentQna?.step || ""]
-  //           ? prevData[currentQna!.step].options || []
-  //           : []),
-  //         selectedOption, // Add the newly selected option
-  //       ],
-  //     },
-  //   }));
-  //   console.log(formData);
-  // };
 
-  const CHECKBOX_INPUT_TOGGLE = "Other";
   const handleCheckboxOptionSelect = (selectedOption: string) => {
     if (selectedOption === CHECKBOX_INPUT_TOGGLE) {
       setIsOtherChecked(true);
@@ -155,7 +140,8 @@ const QStepper: React.FC<QStepperProps> = (props) => {
     // TODO: Add your form submission logic here
     console.log("Form submitted:", data);
 
-    localStorage.setItem(`{user-${Date.now()}}`, JSON.stringify(data));
+    // localStorage.clear();
+    // localStorage.setItem(`${type}-response`, JSON.stringify(data));
   };
 
   useEffect(() => {
@@ -170,7 +156,7 @@ const QStepper: React.FC<QStepperProps> = (props) => {
       pathname: location.pathname,
       search: newSearch,
     });
-  }, [location.search, navigate]);
+  }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
@@ -193,12 +179,29 @@ const QStepper: React.FC<QStepperProps> = (props) => {
     setcontainerHeight(currentQna?.answerType === "rating" ? 80 : 71);
   }, [currentStep, location.search, navigate, currentQna]);
 
+  // to fetch already present question ans from localstprage
+  // useEffect(() => {
+  //   if (true) {
+  //     const localData =
+  //       JSON.parse(localStorage.getItem("rent-response") as string) || [];
+  //     // setFormData(localData);
+  //     setJSONLocalData(localData);
+  //   }
+  // }, []);
+
   const renderPrevStep = () => {
     setCurrentStep((prev) => prev - 1);
   };
   const renderNextStep = () => {
     setCurrentStep((prev) => prev + 1);
   };
+
+  // const renderChecked = (currentQna: Question, item: string) => {
+  //   const isRequireLocalFetch = true;
+  //   const data = isRequireLocalFetch ? JSONlocalData : formData;
+
+  //   return (data![currentQna?.step]?.options || []).includes(item);
+  // };
 
   return (
     <section className="qna-stepper">
@@ -215,84 +218,18 @@ const QStepper: React.FC<QStepperProps> = (props) => {
           isLabelVisible={false}
           bgColor="#6A704C"
         />
-        <form
-          className="qna-box"
-          onSubmit={handleSubmit}
-          key={`form-${currentQna?.step}`}
-        >
-          <div className="question" key={`question-${currentQna?.step}`}>
-            {currentQna?.question}
-          </div>
-          <div className="options">
-            {currentQna?.options.map((ele, index) => (
-              <>
-                {currentQna.answerType === "rating" ? (
-                  <div className="option-rating-item" key={index}>
-                    <span>{ele}</span>
-                    <Rating
-                      uniqueKey={index}
-                      maxRating={5}
-                      onRatingChange={setRating}
-                      qna={currentQna}
-                    />
-                  </div>
-                ) : (
-                  <div className="option-item" key={index}>
-                    {currentQna?.answerType === "checkbox" ? (
-                      <>
-                        {currentQna?.answerType === "checkbox" &&
-                        ele === CHECKBOX_INPUT_TOGGLE ? (
-                          <>
-                            {isOtherChecked ? (
-                              <input
-                                type="text"
-                                value={userOtherInput}
-                                onChange={(e) =>
-                                  setUserOtherInput(e.target.value)
-                                }
-                                className="other-user-input"
-                                placeholder="(Please Specify)"
-                              />
-                            ) : (
-                              <>
-                                <input
-                                  type={currentQna?.answerType}
-                                  onChange={() =>
-                                    handleCheckboxOptionSelect(ele)
-                                  }
-                                  // checked={(
-                                  //   formData![currentQna?.step]?.options || []
-                                  // ).includes(ele)}
-                                />
-                                <span>{ele}</span>
-                              </>
-                            )}
-                          </>
-                        ) : (
-                          <input
-                            type={currentQna?.answerType}
-                            onChange={() => handleCheckboxOptionSelect(ele)}
-                            // checked={(
-                            //   formData![currentQna?.step]?.options || []
-                            // ).includes(ele)}
-                          />
-                        )}
-                      </>
-                    ) : (
-                      <input
-                        type={currentQna?.answerType}
-                        onChange={() => handleRadioOptionSelect(ele)}
-                        name={`radio-input-${currentQna?.step}`}
-                        checked={formData![currentQna?.step]?.options === ele}
-                      />
-                    )}
-                    {ele !== CHECKBOX_INPUT_TOGGLE && <span>{ele}</span>}
-                  </div>
-                )}
-              </>
-            ))}
-          </div>
-        </form>
+        <QNAForm
+          handleSubmit={handleSubmit}
+          currentQna={currentQna}
+          isOtherChecked={isOtherChecked}
+          setRating={setRating}
+          userOtherInput={userOtherInput}
+          handleCheckboxOptionSelect={handleCheckboxOptionSelect}
+          handleRadioOptionSelect={handleRadioOptionSelect}
+          // renderChecked={renderChecked}
+          setUserOtherInput={setUserOtherInput}
+          CHECKBOX_INPUT_TOGGLE={CHECKBOX_INPUT_TOGGLE}
+        />
         <div
           className="btns"
           style={{

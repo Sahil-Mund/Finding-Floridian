@@ -1,19 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "../styles/signin-register.scss";
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../../hooks/useForm";
+import { CloseIcon } from "../../assets/svg";
+import { useUserModal } from "../../hooks/useUserModal";
 
 interface LogInProps {
   // Add your component's props here
 }
 
-const LogIn: React.FC<LogInProps> = (props) => {
-  const { formData, handleChange, resetForm } =
-    useForm({
-      email: "",
-      password: "",
-    });
+const LogIn: React.FC<LogInProps> = () => {
+  const { isModalOpen : isOpen, onClose, changeComponentType } =
+    useUserModal();
+
+  const { formData, handleChange, resetForm } = useForm({
+    email: "",
+    password: "",
+  });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,11 +26,15 @@ const LogIn: React.FC<LogInProps> = (props) => {
     resetForm();
   };
 
- 
-
   return (
-    <section className="user-login">
+    <section
+      className="user-login"
+      style={{ display: isOpen ? "block" : "none" }}
+    >
       <div className="container-box">
+        <div className="close-btn">
+          <CloseIcon onClick={onClose} />
+        </div>
         <div className="content">
           <h1>Talk with your home girl</h1>
           <h5>Please log in with your customer account to continue.</h5>
@@ -43,21 +50,25 @@ const LogIn: React.FC<LogInProps> = (props) => {
               placeholder="Email:"
               name="email"
               onChange={handleChange}
+              autoComplete="off"
             />
             <input
               type="password"
               placeholder="Password:"
               name="password"
               onChange={handleChange}
+              autoComplete="off"
             />
             <div className="forgotpwd">
               <Link to={"/forgot-password"}>Forgot Password?</Link>
             </div>
 
             <div className="btns">
-              <button className="btn-primary" type="submit">LOGIN</button>
+              <button className="btn-primary" type="submit">
+                LOGIN
+              </button>
               <span>
-                New User? <Link to={"/register"}>SignUp</Link>
+                New User? <span onClick={() => changeComponentType('sign-up')} className="pointer sign-up-btn">SignUp</span>
               </span>
             </div>
           </form>

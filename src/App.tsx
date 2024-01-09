@@ -3,14 +3,11 @@ import {
   ContactPage,
   HomePage,
   HomeTour,
-  LogIn,
+  UserLogIn,
   NotFound,
   PropertyDetailGallery,
   QuestionnaireLandingPage,
-  RentalPage,
-  SalePage,
   ShopPage,
-  SignUp,
 } from "./views";
 import {
   ChatBotButton,
@@ -21,13 +18,11 @@ import {
   ScrollToTop,
 } from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { salesPosts } from "./assets/constansts";
 import PropertyDetail from "./views/PropertyDetail";
 
 function App() {
-  //TODO : add condition as per the requirement
-  const isFooterVisibleToCurrentRoute = true;
-  // const navBarHideRoutes = ['/property-detail/gallery']
 
   return (
     <div className="App">
@@ -35,14 +30,9 @@ function App() {
         <ScrollToTop />
         <Navbar />
         <ChatBotButton />
-
+        <UserLogIn />
         <Routes>
           <Route path="/" element={<HomePage />} />
-
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/register" element={<SignUp />} />
-          {/* <Route path="/rent" element={<RentalPage />} />
-          <Route path="/buy" element={<SalePage />} /> */}
           <Route path="/home-tour" element={<HomeTour />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
@@ -61,7 +51,7 @@ function App() {
           {/* Not found route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        {isFooterVisibleToCurrentRoute && <Footer />}
+        <Footer />
       </BrowserRouter>
     </div>
   );

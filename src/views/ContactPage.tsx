@@ -60,6 +60,8 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
     setButtonDisabled(anyValuesEmpty);
   };
 
+
+
   const markAsSubmitted = () => {
     setIsSubmitted(true);
   };
@@ -140,7 +142,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
             <div className="checkbox">
               <div>
                 <input
-                  type="checkbox"
+                  type="radio"
                   name="specifications"
                   id="buySellHome"
                   value={formData.specifications.buySellHome}
@@ -150,7 +152,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
               </div>
               <div>
                 <input
-                  type="checkbox"
+                  type="radio"
                   name="specifications"
                   id="partnership"
                   value={formData.specifications.partnership}
@@ -160,7 +162,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
               </div>
               <div>
                 <input
-                  type="checkbox"
+                  type="radio"
                   name="specifications"
                   id="homeTour"
                   value={formData.specifications.homeTour}
@@ -171,7 +173,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
 
               <div>
                 <input
-                  type="checkbox"
+                  type="radio"
                   name="specifications"
                   id="others"
                   value={formData.specifications.others}

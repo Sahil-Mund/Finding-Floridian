@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/chatbot.scss";
 import ChatModal from "./ChatModal";
-import ModalProvider from "../ModalProvider";
+import CommonModal from "../modal/CommonModal";
 
 interface ChatBotButtonProps {
   // Add your component's props here
@@ -41,7 +41,6 @@ const ChatBotButton: React.FC<ChatBotButtonProps> = (props) => {
           <div className="bot-image">
             <img
               src={isOpen ? happyBotIcon : isHover ? shockBotIcon : sadBotIcon}
-              // src={happyBotIcon}
               width={isHover ? 204 : 66}
               height={isHover ? 68 : 66}
               alt="chat-icon"
@@ -54,19 +53,11 @@ const ChatBotButton: React.FC<ChatBotButtonProps> = (props) => {
             </div>
           )}
         </div>
-        {/* <img
-          // src={isHover ? chatIconOnHover : chatIcon}
-          src={chatIcon}
-          width={isHover ? 204 : 66}
-          height={isHover ? 68 : 66}
-          alt="chat-icon"
-        /> */}
       </div>
-      {/* <div className="modal-overlay"></div> */}
-      {/* <ChatModal isOpen={isOpen} handleModalOpen={setIsOpen} /> */}
-      <ModalProvider isOpen={isOpen} onClose={closeModal}>
+
+      <CommonModal isOpen={isOpen} onClose={closeModal}>
         <ChatModal isOpen={isOpen} handleModalOpen={setIsOpen} />
-      </ModalProvider>
+      </CommonModal>
     </>
   );
 };

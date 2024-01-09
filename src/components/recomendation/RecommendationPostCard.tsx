@@ -11,6 +11,7 @@ import {
   NextArrowIcon,
   UnlockIcon,
 } from "../../assets/svg";
+import {  useUserModal } from "../../hooks/useUserModal";
 
 interface RecommendationPostCardProps {
   // Add your component's props here
@@ -24,11 +25,17 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
   const [unLock, setUnLock] = useState<boolean>(false);
   const [ispremiumUser, setIspremiumUser] = useState<boolean>(false);
 
-  const handleUnlock = () => {
+  const { onOpen } = useUserModal();
+
+  const handleUnlock = async () => {
     setUnLock(true);
     setTimeout(() => {
-      setIspremiumUser(true);
+      setIspremiumUser(false);
+      onOpen();
+      setUnLock(false); // TODO:  will remove this later
     }, 3000);
+
+     
   };
   const handleModal = (
     e: React.MouseEvent<HTMLSpanElement | HTMLDivElement>,
@@ -102,7 +109,7 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
                         <span onClick={handleUnlock} className="pointer">
                           Unlock Premium Insights
                         </span>
-                        <LockIcon className="lock-icon"/>
+                        <LockIcon className="lock-icon" />
                       </>
                     )}
                   </div>
